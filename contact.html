@@ -1,0 +1,112 @@
+<!--
+  Project: Horizon Realty
+  Purpose: Real estate website
+  Author: Parmida Khashayar
+  Date: 2026-02-25
+  Notes:
+    - This is the Contact Us page for Horizon Realty, providing a contact form and office information for inquiries and appointments.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact Horizon Realty - Schedule viewings, property inquiries, and general questions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Horizon Realty</title>
+    <link rel="icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="auto-theme">
+
+<header>
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">LISTINGS</a>
+                <ul class="dropdown-content">
+                    <li><a href="single-family.html">SINGLE FAMILY</a></li>
+                    <li><a href="condos.html">CONDOS</a></li>
+                    <li><a href="townhomes.html">TOWNHOMES</a></li>
+                    <li><a href="luxury-estates.html">LUXURY ESTATES</a></li>
+                    <li><a href="commercial.html">COMMERCIAL</a></li>
+                    <li><a href="land.html">LAND</a></li>
+                    <li><a href="rentals.html">RENTALS</a></li>
+                    <li><a href="multi-family.html">MULTI-FAMILY</a></li>
+                    <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                    <li><a href="vacation-properties.html">VACATION</a></li>
+                    <li><a href="waterfront.html">WATERFRONT</a></li>
+                </ul>
+            </li>
+            <li><a href="featured.html">FEATURED</a></li>
+            <li><a href="market-stats.html">MARKET STATS</a></li>
+            <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
+            <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+            <li><a href="buying-guide.html">BUYING GUIDE</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="help.html">HELP</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="contact-section">
+
+    <h2 class="contact-title">Contact Us</h2>
+
+    <div class="contact-grid">
+
+        <!-- FORM BOX -->
+        <div class="contact-box">
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Full Name" class="form-input" required>
+                <input type="email" placeholder="Email" class="form-input" required>
+                <input type="tel" placeholder="Phone" class="form-input">
+                <select class="form-input">
+                    <option>Property Inquiry</option>
+                    <option>Schedule Viewing</option>
+                    <option>General Question</option>
+                </select>
+                <textarea placeholder="Your Message" rows="5" class="form-input" required></textarea>
+                <button type="submit" class="form-button">Send Message</button>
+            </form>
+        </div>
+
+        <!-- OFFICE INFO BOX -->
+        <div class="contact-box visit-card">
+            <h3>Visit Our Office</h3>
+            <p class="bold" style="color:#2C3E50;">Horizon Realty</p>
+            <p style="color:#2C3E50;" >101 Main Street<br>Windsor, ON N9A 1B2<br>Canada</p>
+
+            <p class="bold" style="color:#2C3E50;">Contact Us</p>
+            <p style="color:#2C3E50;">+1 (519) 555-0199<br>info@horizonrealty.ca</p>
+
+            <p class="bold" style="color:#2C3E50;">Opening Hours</p>
+            <p style="color:#2C3E50;">Mon-Fri: 9AM - 6PM<br>Sat: 10AM - 4PM</p>
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thank you! Your message has been received. (Demo only)');
+});
+</script>
+
+</body>
+</html>

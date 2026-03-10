@@ -1,0 +1,130 @@
+<!--
+  Project: Horizon Realty
+  Purpose: Real estate website
+  Author: Parmida Khashayar
+  Date: 2026-02-25
+  Notes:
+    - This is the Featured Listings page for Horizon Realty, showcasing top properties in single family, condos, and luxury categories.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Horizon Realty - Featured listings. Top picks in single family, condos, and luxury.">
+    <meta name="keywords" content="featured listings, top homes, real estate, Horizon Realty">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Horizon Realty - Featured Listings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="spring-theme">
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                    <ul class="dropdown-content" aria-label="Listing categories">
+                        <li><a href="single-family.html">SINGLE FAMILY</a></li>
+                        <li><a href="condos.html">CONDOS</a></li>
+                        <li><a href="townhomes.html">TOWNHOMES</a></li>
+                        <li><a href="luxury-estates.html">LUXURY ESTATES</a></li>
+                        <li><a href="commercial.html">COMMERCIAL</a></li>
+                        <li><a href="land.html">LAND</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="multi-family.html">MULTI-FAMILY</a></li>
+                        <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                        <li><a href="vacation-properties.html">VACATION</a></li>
+                        <li><a href="waterfront.html">WATERFRONT</a></li>
+                    </ul>
+                </li>
+                <li><a href="featured.html" class="active">FEATURED</a></li>
+                <li><a href="market-stats.html">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="house-collection">
+            <h2>Featured Listings</h2>
+            <div class="featured-categories">
+                <div class="category-tabs">
+                    <button class="tab-button active" data-category="all">All Featured</button>
+                    <button class="tab-button" data-category="single-family">Single Family</button>
+                    <button class="tab-button" data-category="condos">Condos</button>
+                    <button class="tab-button" data-category="luxury">Luxury</button>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" data-categories="single-family">
+                        <img src="media/g1.jpg" alt="Maple Grove Family Home">
+                        <div class="gift-badge"><i class="fas fa-home"></i> Popular</div>
+                        <h3>Maple Grove Family Home</h3>
+                        <p class="product-type">4 bed • 3 bath • 2,400 sq ft • furnished or unfurnished</p>
+                        <p class="product-price">$789,000 CAD</p>
+                        <a href="virtual-tour.html?listing=L001" class="view-details">View Details</a>
+                    </div>
+                    <div class="product-card" data-categories="condos,luxury">
+                        <img src="media/g2.jpg" alt="Skyline Penthouse">
+                        <div class="gift-badge"><i class="fas fa-star"></i> Premium</div>
+                        <h3>Skyline Penthouse</h3>
+                        <p class="product-type">3 bed • 3 bath • 2,800 sq ft • with or without balcony</p>
+                        <p class="product-price">$1,295,000 CAD</p>
+                        <a href="virtual-tour.html?listing=L006" class="view-details">View Details</a>
+                    </div>
+                    <div class="product-card" data-categories="luxury">
+                        <img src="media/RFH2.jpg" alt="Vintage Colonial Estate">
+                        <h3>Vintage Colonial Estate</h3>
+                        <p class="product-type">5 bed • 4 bath • 3,200 sq ft • historic or renovated</p>
+                        <p class="product-price">$925,000 CAD</p>
+                        <a href="virtual-tour.html?listing=L002" class="view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="buying-guide">
+            <h3>Find Your Perfect Property</h3>
+            <div class="guide-cards">
+                <div class="guide-card">
+                    <i class="fas fa-house-user"></i>
+                    <h4>Single Family</h4>
+                    <p>Spacious homes with yards, multiple view and parking options for growing families.</p>
+                </div>
+                <div class="guide-card">
+                    <i class="fas fa-building"></i>
+                    <h4>Condos & Townhomes</h4>
+                    <p>Low-maintenance living with city or courtyard views and flexible finishes.</p>
+                </div>
+                <div class="guide-card">
+                    <i class="fas fa-crown"></i>
+                    <h4>Luxury Estates</h4>
+                    <p>High-end properties with premium finishes, golf or water views, and multi-car garages.</p>
+                </div>
+            </div>
+            <div class="buying-guide-cta">
+                <p>Need help finding a property? Our agents are ready to assist you.</p>
+                <a href="contact.html" class="cta-button">CONTACT AN AGENT</a>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

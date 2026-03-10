@@ -1,0 +1,381 @@
+{
+  "agency": "Horizon Realty",
+  "categories": [
+    { "id": "single-family", "name": "Single Family Homes", "page": "single-family.html" },
+    { "id": "condos", "name": "Condos", "page": "condos.html" },
+    { "id": "townhomes", "name": "Townhomes", "page": "townhomes.html" },
+    { "id": "luxury", "name": "Luxury Estates", "page": "luxury-estates.html" },
+    { "id": "commercial", "name": "Commercial", "page": "commercial.html" },
+    { "id": "land", "name": "Land", "page": "land.html" },
+    { "id": "rentals", "name": "Rentals", "page": "rentals.html" },
+    { "id": "multi-family", "name": "Multi-Family", "page": "multi-family.html" },
+    { "id": "new-developments", "name": "New Developments", "page": "new-developments.html" },
+    { "id": "vacation", "name": "Vacation Properties", "page": "vacation-properties.html" },
+    { "id": "waterfront", "name": "Waterfront", "page": "waterfront.html" }
+  ],
+  "listings": [
+    {
+      "id": "L001",
+      "title": "Maple Grove Family Home",
+      "category": "single-family",
+      "price": 789000,
+      "address": "124 Maple Grove Dr",
+      "options": {
+        "view": ["Garden View", "Street View"],
+        "parking": ["2-Car Garage", "Driveway Only"]
+      },
+      "image": "RFH1.jpg",
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2400
+    },
+    {
+      "id": "L002",
+      "title": "Vintage Colonial Estate",
+      "category": "single-family",
+      "price": 925000,
+      "address": "88 Heritage Lane",
+      "options": {
+        "view": ["Garden View", "Pool View"],
+        "finish": ["Original", "Renovated"]
+      },
+      "image": "RFH2.jpg",
+      "beds": 5,
+      "baths": 4,
+      "sqft": 3200
+    },
+    {
+      "id": "L003",
+      "title": "Modern Prairie House",
+      "category": "single-family",
+      "price": 675000,
+      "address": "200 Sunset Blvd",
+      "options": {
+        "view": ["City View", "Garden View"],
+        "parking": ["Garage", "Carport"]
+      },
+      "image": "RFH3.jpg",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2100
+    },
+    {
+      "id": "L004",
+      "title": "Riverside Family Home",
+      "category": "single-family",
+      "price": 845000,
+      "address": "45 River Road",
+      "options": {
+        "view": ["Water View", "Garden View"],
+        "parking": ["2-Car Garage", "3-Car Garage"]
+      },
+      "image": "RFH4.jpg",
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2600
+    },
+    {
+      "id": "L005",
+      "title": "Downtown Loft Condo",
+      "category": "condos",
+      "price": 485000,
+      "address": "501 City Tower",
+      "options": {
+        "view": ["City View", "Harbor View"],
+        "finish": ["Standard", "Premium"]
+      },
+      "image": "EN1.jpg",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1200
+    },
+    {
+      "id": "L006",
+      "title": "Skyline Penthouse",
+      "category": "condos",
+      "price": 1295000,
+      "address": "100 Skyline Ave",
+      "options": {
+        "view": ["360 City View", "Water View"],
+        "finish": ["Premium", "Luxury"]
+      },
+      "image": "EN2.jpg",
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2800
+    },
+    {
+      "id": "L007",
+      "title": "Platinum Harmony Townhome",
+      "category": "townhomes",
+      "price": 565000,
+      "address": "12 Harmony Way",
+      "options": {
+        "view": ["Courtyard", "Street"],
+        "parking": ["1-Car Garage", "2-Car Garage"]
+      },
+      "image": "SR1.jpg",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1800
+    },
+    {
+      "id": "L008",
+      "title": "Golden Eternity Townhome",
+      "category": "townhomes",
+      "price": 620000,
+      "address": "7 Eternity Lane",
+      "options": {
+        "view": ["Garden View", "Pool View"],
+        "finish": ["Standard", "Upgraded"]
+      },
+      "image": "SR2.jpg",
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2200
+    },
+    {
+      "id": "L009",
+      "title": "Celestial Pair Duplex",
+      "category": "townhomes",
+      "price": 598000,
+      "address": "33 Celestial Dr",
+      "options": {
+        "view": ["Garden", "City"],
+        "parking": ["Driveway", "Garage"]
+      },
+      "image": "SR3.jpg",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1900
+    },
+    {
+      "id": "L010",
+      "title": "Titanium Sovereign Estate",
+      "category": "luxury",
+      "price": 2450000,
+      "address": "1 Sovereign Hill",
+      "options": {
+        "view": ["Golf Course", "Lake View"],
+        "finish": ["Premium", "Luxury"]
+      },
+      "image": "RHIM1.jpg",
+      "beds": 6,
+      "baths": 5,
+      "sqft": 5800
+    },
+    {
+      "id": "L011",
+      "title": "Platinum Regent Manor",
+      "category": "luxury",
+      "price": 1890000,
+      "address": "500 Regent Park",
+      "options": {
+        "view": ["Waterfront", "Garden"],
+        "parking": ["3-Car Garage", "4-Car Garage"]
+      },
+      "image": "RHIM2.jpg",
+      "beds": 5,
+      "baths": 4,
+      "sqft": 4500
+    },
+    {
+      "id": "L012",
+      "title": "Gold & Onyx Signet House",
+      "category": "luxury",
+      "price": 1650000,
+      "address": "88 Signet Blvd",
+      "options": {
+        "view": ["City Skyline", "Garden"],
+        "finish": ["Classic", "Modern"]
+      },
+      "image": "RHIM3.jpg",
+      "beds": 5,
+      "baths": 4,
+      "sqft": 4200
+    },
+    {
+      "id": "L013",
+      "title": "Imperial Office Tower",
+      "category": "commercial",
+      "price": 3200000,
+      "address": "100 Business Park",
+      "options": {
+        "view": ["City View", "Park View"],
+        "lease": ["Full Floor", "Half Floor"]
+      },
+      "image": "N1.jpg",
+      "sqft": 12000
+    },
+    {
+      "id": "L014",
+      "title": "Golden Serpent Retail",
+      "category": "commercial",
+      "price": 1450000,
+      "address": "200 Main Street",
+      "options": {
+        "view": ["Street Front", "Corner Unit"],
+        "finish": ["Shell", "Turnkey"]
+      },
+      "image": "N2.jpg",
+      "sqft": 4500
+    },
+    {
+      "id": "L015",
+      "title": "Pearl Royale Mixed-Use",
+      "category": "commercial",
+      "price": 2100000,
+      "address": "55 Pearl Ave",
+      "options": {
+        "view": ["Water View", "Street"],
+        "use": ["Retail", "Office"]
+      },
+      "image": "N3.jpg",
+      "sqft": 6800
+    },
+    {
+      "id": "L016",
+      "title": "Celestial Diamond Lot",
+      "category": "land",
+      "price": 285000,
+      "address": "North 40, Parcel A",
+      "options": {
+        "zoning": ["Residential", "Agricultural"],
+        "utilities": ["Available", "To Be Run"]
+      },
+      "image": "Pendant1.jpg",
+      "acres": 2.5
+    },
+    {
+      "id": "L017",
+      "title": "Golden Embrace Acreage",
+      "category": "land",
+      "price": 425000,
+      "address": "West Hills, Lot 12",
+      "options": {
+        "view": ["Mountain", "Valley"],
+        "access": ["Paved Road", "Gravel"]
+      },
+      "image": "Pendant2.jpg",
+      "acres": 5
+    },
+    {
+      "id": "L018",
+      "title": "Sapphire Cascade Lot",
+      "category": "land",
+      "price": 195000,
+      "address": "Lakeside Parcel 7",
+      "options": {
+        "waterfront": ["Yes", "No"],
+        "zoning": ["Residential", "Recreational"]
+      },
+      "image": "Pendant3.jpg",
+      "acres": 1.2
+    },
+    {
+      "id": "L019",
+      "title": "Imperial Tennis Rental",
+      "category": "rentals",
+      "price": 3200,
+      "address": "124 Maple Grove Dr",
+      "options": {
+        "term": ["12 Month", "Month-to-Month"],
+        "furnished": ["Unfurnished", "Furnished"]
+      },
+      "image": "b1.jpg",
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2400
+    },
+    {
+      "id": "L020",
+      "title": "Golden Serpent Apartment",
+      "category": "rentals",
+      "price": 1850,
+      "address": "200 Main St, Unit 4B",
+      "options": {
+        "view": ["Street", "Courtyard"],
+        "parking": ["Included", "Optional"]
+      },
+      "image": "b2.jpg",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1100
+    },
+    {
+      "id": "L021",
+      "title": "Triplex Multi-Family",
+      "category": "multi-family",
+      "price": 695000,
+      "address": "88 Oak Street",
+      "options": {
+        "units": ["2 Units", "3 Units"],
+        "parking": ["Street", "Off-Street"]
+      },
+      "image": "E1.jpg",
+      "beds": 9,
+      "baths": 6,
+      "sqft": 3600
+    },
+    {
+      "id": "L022",
+      "title": "Fourplex Investment",
+      "category": "multi-family",
+      "price": 825000,
+      "address": "120 Pine Ave",
+      "options": {
+        "condition": ["Turnkey", "Value-Add"],
+        "parking": ["1 Per Unit", "2 Per Unit"]
+      },
+      "image": "E2.jpg",
+      "beds": 8,
+      "baths": 8,
+      "sqft": 4400
+    },
+    {
+      "id": "L023",
+      "title": "Horizon Heights Phase 1",
+      "category": "new-developments",
+      "price": 545000,
+      "address": "Horizon Heights Development",
+      "options": {
+        "unit": ["Plan A", "Plan B", "Plan C"],
+        "finish": ["Standard", "Premium"]
+      },
+      "image": "Set1.jpg",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1650
+    },
+    {
+      "id": "L024",
+      "title": "Lakeside Cottage Retreat",
+      "category": "vacation",
+      "price": 425000,
+      "address": "Lake Serenity",
+      "options": {
+        "view": ["Lake View", "Wooded"],
+        "access": ["Year-Round", "Seasonal"]
+      },
+      "image": "bangle1.jpg",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1400
+    },
+    {
+      "id": "L025",
+      "title": "Luminous Waterfront Villa",
+      "category": "waterfront",
+      "price": 1595000,
+      "address": "100 Shoreline Dr",
+      "options": {
+        "view": ["Water View", "Sunset View"],
+        "dock": ["Boat Dock", "No Dock"]
+      },
+      "image": "PE1.jpg",
+      "beds": 4,
+      "baths": 4,
+      "sqft": 3800
+    }
+  ]
+}

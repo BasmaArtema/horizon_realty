@@ -1,0 +1,121 @@
+<!--
+  Project: Horizon Realty
+  Purpose: Real estate website
+  Author: Parmida Khashayar
+  Date: 2026-02-25
+  Notes:
+    - This is the Help Center page for Horizon Realty, providing documentation and FAQs for users.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Horizon Realty Help Center and Documentation">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Center - Horizon Realty</title>
+<link rel="icon" href="media/favicon.ico">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="spring-theme">
+
+<header>
+    <h1>HORIZON REALTY</h1>
+
+    <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                    <ul class="dropdown-content" aria-label="Listing categories">
+                        <li><a href="single-family.html">SINGLE FAMILY</a></li>
+                        <li><a href="condos.html">CONDOS</a></li>
+                        <li><a href="townhomes.html">TOWNHOMES</a></li>
+                        <li><a href="luxury-estates.html">LUXURY ESTATES</a></li>
+                        <li><a href="commercial.html">COMMERCIAL</a></li>
+                        <li><a href="land.html">LAND</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="multi-family.html">MULTI-FAMILY</a></li>
+                        <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                        <li><a href="vacation-properties.html">VACATION</a></li>
+                        <li><a href="waterfront.html">WATERFRONT</a></li>
+                    </ul>
+                </li>
+                <li><a href="featured.html" class="active">FEATURED</a></li>
+                <li><a href="market-stats.html">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+</header>
+
+<main>
+
+<h2 class="help-title">Help Center</h2>
+
+<div class="help-container">
+
+    <!-- SIDEBAR -->
+    <aside class="help-sidebar">
+        <h3>Documentation</h3>
+        <ul class="help-menu">
+            <li><a href="help.html" class="active"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a href="wiki-welcome.html"><i class="fas fa-star"></i> Welcome Page</a></li>
+            <li><a href="wiki-listings.html"><i class="fas fa-building"></i> Listings</a></li>
+            <li><a href="wiki-calculator.html"><i class="fas fa-calculator"></i> Mortgage Calculator</a></li>
+            <li><a href="wiki-api.html"><i class="fas fa-code"></i> API / JavaScript</a></li>
+            <li><a href="wiki-admin.html"><i class="fas fa-user-shield"></i> Admin Panel</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <section>
+
+        <div class="help-section">
+            <h2>Welcome to Horizon Realty Help</h2>
+            <p>
+                This documentation explains the structure, features, and functionality of the Horizon Realty website.
+                Use the sidebar to navigate through different sections including listings, mortgage calculator,
+                JavaScript functionality, and admin features.
+            </p>
+        </div>
+
+        <div class="help-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the mortgage calculator work?</div>
+                <div class="faq-answer">
+                    The calculator estimates monthly payments using loan amount, interest rate, and term.
+                    It applies a standard amortization formula to compute monthly cost.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are listings dynamically loaded?</div>
+                <div class="faq-answer">
+                    Listings are currently static HTML pages grouped by category.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this site responsive?</div>
+                <div class="faq-answer">
+                    Yes. The layout adjusts for tablets and mobile devices using CSS grid and media queries.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</main>
+</html>

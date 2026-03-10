@@ -1,0 +1,151 @@
+<!--
+  Project: Horizon Realty
+  Purpose: Real estate website
+  Author: Parmida Khashayar
+  Date: 2026-02-25
+  Notes:
+    - This is the Buying Guide page for Horizon Realty, providing steps and resources for home buyers.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Horizon Realty Buying Guide - Steps to buy a home, financing, and what to expect.">
+    <meta name="keywords" content="buying a home, first-time buyer, mortgage, real estate guide, Horizon Realty">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Buying Guide - Horizon Realty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="spring-theme">
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="single-family.html">SINGLE FAMILY</a></li>
+                        <li><a href="condos.html">CONDOS</a></li>
+                        <li><a href="townhomes.html">TOWNHOMES</a></li>
+                        <li><a href="luxury-estates.html">LUXURY ESTATES</a></li>
+                        <li><a href="commercial.html">COMMERCIAL</a></li>
+                        <li><a href="land.html">LAND</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="multi-family.html">MULTI-FAMILY</a></li>
+                        <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                        <li><a href="vacation-properties.html">VACATION</a></li>
+                        <li><a href="waterfront.html">WATERFRONT</a></li>
+                    </ul>
+                </li>
+                <li><a href="featured.html">FEATURED</a></li>
+                <li><a href="market-stats.html">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.html" class="active">BUYING GUIDE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="help.html#listings">HELP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="house-price-container">
+        <h2 class="house-price-title"><i class="fas fa-home"></i> BUYING GUIDE</h2>
+        <p style="text-align:center; margin-bottom:2rem;">Steps to buying your next home with Horizon Realty</p>
+
+        <div class="browse-guide">
+            <!-- Card 1 -->
+            <div class="browse-card">
+                <div class="icon-circle"><i class="fas fa-search"></i></div>
+                <div class="browse-content">
+                    <h3>1. Browse Listings</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Use the menu</strong> – Listings are grouped by type (Single Family, Condos, Townhomes, etc.).</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>View options</strong> – Each property may have options (view type, parking, finish).</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Virtual Tour</strong> – Use the Virtual Tour page and “View Details” on any listing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="budget-card">
+                <div class="icon-circle"><i class="fas fa-calculator"></i></div>
+                <div class="budget-content">
+                    <h3>2. Estimate Your Budget</h3>
+                    <div class="budget-guide">
+                        <div class="budget">
+                            <h4><i class="fas fa-money-bill-wave"></i> Mortgage Calculator</h4>
+                            <p>Use our <a href="mortgage-calculator.html">Mortgage Calculator</a> to estimate monthly payments for different loan amounts and terms.</p>
+                        </div>
+                        <div class="budget">
+                            <h4><i class="fas fa-globe"></i> Exchange Rates</h4>
+                            <p>International buyers can check <a href="market-stats.html">Market Stats</a> for current CAD exchange rates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="view-card">
+                <div class="icon-circle"><i class="fas fa-calendar-check"></i></div>
+                <div class="view-content">
+                    <h3>3. Schedule a Viewing</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Contact us</strong> – Use the <a href="contact.html">Contact</a> form to request a viewing or ask questions.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Theme</strong> – The site uses seasonal themes (Spring, Christmas, Classic) that change automatically.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links-card">
+                <div class="icon-circle"><i class="fas fa-list"></i></div>
+                <div class="quick-links-content">
+                    <h3>Quick Links</h3>
+                    <div class="schedule-table">
+                        <div class="schedule-row header">
+                            <div class="schedule-cell">Resource</div>
+                            <div class="schedule-cell">Link</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-cell">Mortgage Calculator</div>
+                            <div class="schedule-cell"><a href="mortgage-calculator.html">mortgage-calculator.html</a></div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-cell">Market Stats (Rates)</div>
+                            <div class="schedule-cell"><a href="market-stats.html">market-stats.html</a></div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-cell">Contact / Inquiries</div>
+                            <div class="schedule-cell"><a href="contact.html">contact.html</a></div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-cell">Help & FAQ</div>
+                            <div class="schedule-cell"><a href="help.html">help.html</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-cta">
+            <p><i class="fas fa-phone-alt"></i> Ready to take the next step? <a href="contact.html">Contact us</a> to schedule a viewing or get pre-approval advice.</p>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!--
+  Project: Horizon Realty
+  Purpose: Real estate website
+  Author: Parmida Khashayar
+  Date: 2026-02-25
+  Notes:
+    - This is the About Us page for Horizon Realty, a local real estate agency.
+    - The page includes a hero video, company information, and technology details.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Horizon Realty - Your local real estate agency for homes, condos, and land.">
+    <meta name="keywords" content="about Horizon Realty, real estate agency">
+    <link rel="icon" href="media/favicon.ico">
+    <title>About Us - Horizon Realty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="auto-theme">
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                    <ul class="dropdown-content" aria-label="Listing categories">
+                        <li><a href="single-family.html">SINGLE FAMILY</a></li>
+                        <li><a href="condos.html">CONDOS</a></li>
+                        <li><a href="townhomes.html">TOWNHOMES</a></li>
+                        <li><a href="luxury-estates.html">LUXURY ESTATES</a></li>
+                        <li><a href="commercial.html">COMMERCIAL</a></li>
+                        <li><a href="land.html">LAND</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="multi-family.html">MULTI-FAMILY</a></li>
+                        <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                        <li><a href="vacation-properties.html">VACATION</a></li>
+                        <li><a href="waterfront.html">WATERFRONT</a></li>
+                    </ul>
+                </li>
+                <li><a href="featured.html">FEATURED</a></li>
+                <li><a href="market-stats.html">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main class="about-page">
+
+    <div class="about-hero">
+        <video autoplay muted loop playsinline>
+            <source src="media/Video1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <h2>Horizon Realty — Find Your Place</h2>
+            <p>Where elegance meets opportunity.</p>
+        </div>
+    </div>
+
+    <div class="about-content-wrapper">
+
+        <div class="about-card">
+            <h3>Who We Are</h3>
+            <p>
+                Horizon Realty is a full-service real estate agency helping buyers and sellers 
+                with single family homes, condos, townhomes, luxury estates, commercial property, 
+                land, rentals, and waterfront listings.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>What Our Platform Offers</h3>
+            <ul>
+                <li>20+ listing categories with multiple options per property</li>
+                <li>Mortgage Calculator for payment estimates</li>
+                <li>Market Stats with live currency conversion</li>
+                <li>Buying Guide and Help Wiki</li>
+                <li>Contact form for viewings and inquiries</li>
+                <li>Fully responsive modern design</li>
+            </ul>
+        </div>
+
+        <div class="about-card">
+            <h3>Technology & Updates</h3>
+            <p>
+                The website uses three seasonal themes (Classic, Spring, Christmas) that 
+                switch automatically. We integrate live exchange rates and local weather 
+                data for accurate budgeting and planning.
+            </p>
+            <p>
+                Listings can be updated easily through the 
+                <code>listings.json</code> file without modifying HTML pages.
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

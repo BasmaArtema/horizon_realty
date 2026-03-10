@@ -1,0 +1,130 @@
+<!--
+  Project: Horizon Realty
+  Purpose: Real estate website
+  Author: Parmida Khashayar
+  Date: 2026-02-25
+  Notes:
+    - This is the Mortgage Calculator page for Horizon Realty, providing a form to estimate monthly payments based on loan amount, term, and interest rate, along with a video guide and disclaimer.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Horizon Realty Mortgage Calculator - Estimate monthly payments based on loan amount, term, and rate.">
+    <meta name="keywords" content="mortgage calculator, monthly payment, loan estimate, Horizon Realty">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Mortgage Calculator - Horizon Realty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .estimator-form-box { max-width: 600px; margin: 2rem auto; padding: 2rem; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .estimator-form-box label { display: block; margin-top: 1rem; font-weight: 600; }
+        .estimator-form-box input, .estimator-form-box select { width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .estimator-form-box button { margin-top: 1.5rem; padding: 0.8rem 2rem; background: var(--primary-color); color: #fffefe; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; }
+        .estimator-form-box button:hover { background: var(--secondary-color); }
+        #quoteResult { margin-top: 1.5rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px; display: none; }
+    </style>
+</head>
+
+<body class="spring-theme">
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                    <ul class="dropdown-content" aria-label="Listing categories">
+                        <li><a href="single-family.html">SINGLE FAMILY</a></li>
+                        <li><a href="condos.html">CONDOS</a></li>
+                        <li><a href="townhomes.html">TOWNHOMES</a></li>
+                        <li><a href="luxury-estates.html">LUXURY ESTATES</a></li>
+                        <li><a href="commercial.html">COMMERCIAL</a></li>
+                        <li><a href="land.html">LAND</a></li>
+                        <li><a href="rentals.html">RENTALS</a></li>
+                        <li><a href="multi-family.html">MULTI-FAMILY</a></li>
+                        <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                        <li><a href="vacation-properties.html">VACATION</a></li>
+                        <li><a href="waterfront.html">WATERFRONT</a></li>
+                    </ul>
+                </li>
+                <li><a href="featured.html">FEATURED</a></li>
+                <li><a href="market-stats.html">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.html" class="active">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="help.html#calculator">HELP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="collection">
+            <h2 class="house-price-title">MORTGAGE CALCULATOR</h2>
+            <div class="estimator-container">
+                <div class="video-guide">
+                    <video controls poster="media/estimator-poster.jpg">
+                        <source src="media/Video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="video-caption">Quick guide: use the form to get a monthly payment estimate.</p>
+                </div>
+                <div class="estimator-instructions">
+                    <h3>Get a Payment Quote</h3>
+                    <p>Use the form below to estimate your monthly mortgage payment based on loan amount, term, and interest rate. This is for illustration only; contact us for pre-approval.</p>
+                    <!-- Dynamic form for mortgage quote -->
+                    <div class="estimator-form-box">
+                        <form id="mortgageForm">
+                            <label for="loanAmount">Loan Amount (CAD)</label>
+                            <input type="number" id="loanAmount" value="400000" min="10000" step="10000" required>
+                            <label for="termYears">Term (years)</label>
+                            <select id="termYears">
+                                <option value="5">5 years</option>
+                                <option value="10">10 years</option>
+                                <option value="15">15 years</option>
+                                <option value="20">20 years</option>
+                                <option value="25" selected>25 years</option>
+                                <option value="30">30 years</option>
+                            </select>
+                            <label for="interestRate">Interest Rate (% per year)</label>
+                            <input type="number" id="interestRate" value="5.5" min="1" max="20" step="0.1" required>
+                            <button type="submit">Calculate Payment</button>
+                        </form>
+                        <div id="quoteResult"></div>
+                    </div>
+                    <p class="disclaimer">
+                        <i class="fas fa-exclamation-circle"></i> This calculator provides estimates only. Actual terms depend on your credit and lender. For personalized advice, <a href="contact.html">contact us</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+    <script>
+        // Mortgage quote form: calculate monthly payment and display result
+        document.getElementById('mortgageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var P = parseFloat(document.getElementById('loanAmount').value);
+            var y = parseInt(document.getElementById('termYears').value, 10);
+            var r = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            var n = y * 12;
+            var monthly = (r === 0) ? (P / n) : (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+            var result = document.getElementById('quoteResult');
+            result.style.display = 'block';
+            result.innerHTML = '<strong>Estimated monthly payment:</strong> $' + monthly.toFixed(2) + ' CAD<br>' +
+                'Total payments over ' + y + ' years: $' + (monthly * n).toFixed(2) + ' CAD';
+        });
+    </script>
+</body>
+</html>

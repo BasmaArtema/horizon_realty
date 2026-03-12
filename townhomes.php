@@ -69,13 +69,7 @@ include 'php/db.php';
         <h2>TOWNHOMES</h2>
             <div class="product-grid">
 
-            <?php
-            $sql = "SELECT * FROM listings WHERE category='townhomes'";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()){
-            ?>
+            <?php include 'php/townhomes.php'; ?>
 
             <article class="product-card">
                 <img src="media/<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">

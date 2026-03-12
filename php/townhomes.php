@@ -4,7 +4,8 @@ include 'db.php';
 $sql = "SELECT * FROM listings WHERE category='townhomes'";
 $result = $conn->query($sql);
 
-while($row = $result->fetch_assoc()){
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()){
 ?>
 <article class="product-card">
     <img src="media/<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
@@ -21,5 +22,8 @@ while($row = $result->fetch_assoc()){
     </p>
 </article>
 <?php
+    }
+} else {
+    echo "<p>No townhomes available.</p>";
 }
 ?>

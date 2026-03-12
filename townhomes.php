@@ -73,7 +73,8 @@ include 'php/db.php';
             $sql = "SELECT * FROM listings WHERE category='townhomes'";
             $result = $conn->query($sql);
 
-            while($row = $result->fetch_assoc()){
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()){
             ?>
 
             <article class="product-card">
@@ -92,6 +93,9 @@ include 'php/db.php';
             </article>
 
             <?php
+                }
+            } else {
+                echo "<p>No townhomes available.</p>";
             }
             ?>
 

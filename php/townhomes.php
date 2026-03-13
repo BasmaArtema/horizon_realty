@@ -9,7 +9,7 @@ if ($result->num_rows > 0) {
 ?>
 <article class="product-card">
     <img src="media/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
-    <h3><?php echo $row['title']; ?></h3>
+    <h3><?php echo htmlspecialchars($row['title']); ?></h3>
 
     <p class="product-type">
         <?php echo $row['beds']; ?> bed • 
@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
     </p>
 
     <p class="product-price">
-        $<?php echo number_format($row['price']); ?> CAD
+        $<?php echo number_format((float)$row['price']); ?> CAD
     </p>
 </article>
 <?php

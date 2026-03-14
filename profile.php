@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["user_email"])) {
+if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
     exit();
 }
@@ -10,7 +10,7 @@ if (!isset($_SESSION["user_email"])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profile - Horizon Realty</title>
+    <title>My Profile - Horizon Realty</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,10 +18,11 @@ if (!isset($_SESSION["user_email"])) {
 <h1>My Profile</h1>
 
 <p>Welcome to your private account area.</p>
-<p>Name: Demo User</p>
-<p>Email: <?php echo htmlspecialchars($_SESSION["user_email"]); ?></p>
+<p><strong>Name:</strong> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></p>
+<p><strong>Email:</strong> <?php echo htmlspecialchars($_SESSION["user_email"]); ?></p>
+<p><strong>Role:</strong> <?php echo htmlspecialchars($_SESSION["user_role"]); ?></p>
 
-<a href="login.php">Back to Login</a>
+<p><a href="logout.php">Logout</a></p>
 
 </body>
 </html>

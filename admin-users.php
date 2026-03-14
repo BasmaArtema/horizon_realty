@@ -1,48 +1,78 @@
 <?php
 session_start();
+include 'php/db.php';
 
-if (!isset($_SESSION["user_email"])) {
+if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
     exit();
 }
+
+if ($_SESSION["user_role"] !== "admin") {
+    die("Access denied.");
+}
+
+if (isset($_GET["toggle"])) {
+
+    $user_id = (int) $_GET["toggle"];
+
+    $stmt = $conn->prepare("
+        UPDATE users
+        SET status = CASE
+            WHEN status = 'active' THEN 'disabled'
+            ELSE 'active'
+        END
+        WHERE id = ?
+    ");
+
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: admin-users.php");
+    exit();
+}
+
+$result = $conn->query("SELECT id, full_name, email, role, status FROM users ORDER BY id ASC");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Users - Horizon Realty</title>
+    <title>Admin - Manage Users</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <h1>User Administration</h1>
-<p>Logged in as: <?php echo htmlspecialchars($_SESSION["user_email"]); ?></p>
-
-<p>This page will allow an admin to manage user accounts.</p>
 
 <table border="1" cellpadding="10">
 <tr>
-<th>Name</th>
-<th>Email</th>
-<th>Status</th>
-<th>Action</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Status</th>
+    <th>Action</th>
 </tr>
 
-<tr>
-<td>Example User</td>
-<td>example@email.com</td>
-<td>Active</td>
-<td><button>Disable</button></td>
-</tr>
+<?php while ($row = $result->fetch_assoc()) { ?>
 
 <tr>
-<td>Test User</td>
-<td>test@email.com</td>
-<td>Disabled</td>
-<td><button>Enable</button></td>
+    <td><?php echo htmlspecialchars($row["full_name"]); ?></td>
+    <td><?php echo htmlspecialchars($row["email"]); ?></td>
+    <td><?php echo htmlspecialchars($row["role"]); ?></td>
+    <td><?php echo htmlspecialchars($row["status"]); ?></td>
+    <td>
+        <a href="admin-users.php?toggle=<?php echo $row["id"]; ?>">
+            <?php echo $row["status"] === "active" ? "Disable" : "Enable"; ?>
+        </a>
+    </td>
 </tr>
+
+<?php } ?>
 
 </table>
+
+<p><a href="profile.php">Back to Profile</a></p>
 
 </body>
 </html>

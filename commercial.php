@@ -27,12 +27,15 @@ $category = "commercial";
 
 <body class="spring-theme">
     <header>
-        <h1>HORIZON REALTY</h1>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="header-container">
+            <div class="logo">
+                <img src="media/logo.png" alt="Horizon Realty Logo">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
@@ -62,6 +65,7 @@ $category = "commercial";
                 <li><a href="help.html">HELP</a></li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <main>

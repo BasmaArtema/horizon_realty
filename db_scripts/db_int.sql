@@ -58,7 +58,7 @@ INSERT INTO users (full_name, email, password, role, status)
 VALUES (
     'Admin User',
     'admin@horizonrealty.com',
-    '$2y$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+    '$2y$10$MhEwWzxAjUP6Qbv6SFRWYuB0GqQWUzs75/c1rbCZjXxH/ZqBbh8NC',
     'admin',
     'active'
 );

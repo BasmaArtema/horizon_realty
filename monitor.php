@@ -137,6 +137,8 @@ foreach ($pages as $file => $label) {
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="help.html">HELP</a></li>
+<li><a href="login.php">LOGIN</a></li>
+<li><a href="register.php">REGISTER</a></li>
                 <li><a href="monitor.php" class="active">MONITOR</a></li>
             </ul>
         </nav>

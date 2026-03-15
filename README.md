@@ -55,6 +55,7 @@ Open `index.html` in your web browser to view the website.
 - `php/`: Server-side scripts
 - `db_scripts/`: Database setup scripts
 - `media/`: Images and media files
+- `ADMIN_DOCUMENTATION.md`: Admin user setup and usage guide
 
 ## Contributing
 1. Fork the repository

@@ -73,6 +73,13 @@ $category = "new-developments";
         </section>
     </main>
 
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Horizon Realty. All rights reserved.</p>
+            <p>Find your dream home with us.</p>
+        </div>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 

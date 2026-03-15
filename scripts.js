@@ -28,29 +28,39 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Applied seasonal theme:", theme);
 });
 
-// Featured listing category tabs (featured.html): filter cards by category
-document.addEventListener('DOMContentLoaded', function () {
-    const tabButtons = document.querySelectorAll('.tab-button');
+// ==============================
+// MOBILE MENU TOGGLE
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('nav');
 
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Remove active class from all buttons
-            tabButtons.forEach(btn => btn.classList.remove('active'));
+  if (!toggleButton || !nav) return;
 
-            // Add active class to clicked button
-            this.classList.add('active');
+  toggleButton.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
 
-            const category = this.getAttribute('data-category');
-            const productCards = document.querySelectorAll('.product-card');
+  // Close on escape
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+    }
+  });
 
-            productCards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-categories').includes(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
+  // Handle dropdown on mobile (click instead of hover)
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    const content = dropdown.querySelector('.dropdown-content');
+    if (link && content) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          content.classList.toggle('open');
+        }
+      });
+    }
+  });
 });
 

@@ -5,8 +5,8 @@ $category = "townhomes";
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
-  Author: Parmida Khashayar
-  Date: 2026-02-25
+  Authors: Parmida Khashayar, Haleema Bibi, and Basma Abou Artema
+  Date: 2026-03-26
   Notes:
     - This is the Townhomes listings page for Horizon Realty, showcasing properties with courtyard, garden, and pool views, as well as garage options.
 -->

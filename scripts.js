@@ -64,3 +64,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ==============================
+// FEATURED LISTINGS FILTER
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const productCards = document.querySelectorAll('.product-card');
+
+  if (tabButtons.length === 0 || productCards.length === 0) return;
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active to clicked button
+      button.classList.add('active');
+
+      const category = button.getAttribute('data-category');
+
+      productCards.forEach(card => {
+        const cardCategories = card.getAttribute('data-categories').split(',');
+        if (category === 'all' || cardCategories.includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+

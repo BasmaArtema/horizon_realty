@@ -581,6 +581,22 @@ footer{
   margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .guide-cards {
+    grid-template-columns: 1fr;
+  }
+  .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tab-button {
+    padding: .6rem 1.2rem;
+    font-size: 0.9rem;
+    margin: .3rem;
+  }
+}
+
 /* ================= FEATURED FILTER BUTTONS ================= */
 
 .category-tabs{
@@ -621,6 +637,21 @@ footer{
   max-width:1200px;
   margin:0 auto 4rem auto;
   align-items:start;
+}
+
+@media (max-width: 768px) {
+  .estimator-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .estimator-instructions {
+    padding: 1.5rem;
+  }
+  .estimator-form-box {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
 }
 
 /* Video side */

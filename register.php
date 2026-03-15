@@ -46,28 +46,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Register - Horizon Realty</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Register for Horizon Realty admin access.">
+    <meta name="keywords" content="register, admin, Horizon Realty">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="spring-theme">
+
+<div style="max-width: 400px; margin: 5rem auto; padding: 2rem; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center;">
 
 <h1>Create Account</h1>
 
-<?php if ($message != "") echo "<p>$message</p>"; ?>
+<?php if ($message != "") echo "<p style='color: " . (strpos($message, 'successful') !== false ? 'green' : 'red') . ";'>$message</p>"; ?>
 
-<form method="POST">
+<form method="POST" style="text-align: left;">
 
     <label>Full Name</label><br>
-    <input type="text" name="full_name" required><br><br>
+    <input type="text" name="full_name" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Email</label><br>
-    <input type="email" name="email" required><br><br>
+    <input type="email" name="email" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Password</label><br>
-    <input type="password" name="password" required><br><br>
+    <input type="password" name="password" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
-    <button type="submit">Register</button>
+    <button type="submit" style="width: 100%; padding: 0.8rem; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Register</button>
 
 </form>
 
+<p style="text-align: center; margin-top: 1rem;"><a href="login.php" style="color: var(--primary-color); text-decoration: none;">Already have an account? Login</a></p>
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

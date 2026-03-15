@@ -63,43 +63,50 @@ $stmt->close();
     <link rel="icon" href="media/favicon.ico">
     <title>Horizon Realty - Edit Listing</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="spring-theme">
+
+<div style="max-width: 600px; margin: 5rem auto; padding: 2rem; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
 
 <h1>Edit Listing</h1>
 
-<?php if ($message != "") echo "<p>$message</p>"; ?>
+<?php if ($message != "") echo "<p style='color: " . (strpos($message, 'successfully') !== false ? 'green' : 'red') . ";'>$message</p>"; ?>
 
-<form method="POST">
+<form method="POST" style="text-align: left;">
 
     <label>Title</label><br>
-    <input type="text" name="title" value="<?php echo htmlspecialchars($row["title"]); ?>" required><br><br>
+    <input type="text" name="title" value="<?php echo htmlspecialchars($row["title"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Category</label><br>
-    <input type="text" name="category" value="<?php echo htmlspecialchars($row["category"]); ?>" required><br><br>
+    <input type="text" name="category" value="<?php echo htmlspecialchars($row["category"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Price</label><br>
-    <input type="number" name="price" value="<?php echo htmlspecialchars($row["price"]); ?>" required><br><br>
+    <input type="number" name="price" value="<?php echo htmlspecialchars($row["price"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Address</label><br>
-    <input type="text" name="address" value="<?php echo htmlspecialchars($row["address"]); ?>" required><br><br>
+    <input type="text" name="address" value="<?php echo htmlspecialchars($row["address"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Image</label><br>
-    <input type="text" name="image" value="<?php echo htmlspecialchars($row["image"]); ?>" required><br><br>
+    <input type="text" name="image" value="<?php echo htmlspecialchars($row["image"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Beds</label><br>
-    <input type="number" name="beds" value="<?php echo htmlspecialchars($row["beds"]); ?>" required><br><br>
+    <input type="number" name="beds" value="<?php echo htmlspecialchars($row["beds"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Baths</label><br>
-    <input type="number" name="baths" value="<?php echo htmlspecialchars($row["baths"]); ?>" required><br><br>
+    <input type="number" name="baths" value="<?php echo htmlspecialchars($row["baths"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <label>Square Feet</label><br>
-    <input type="number" name="sqft" value="<?php echo htmlspecialchars($row["sqft"]); ?>" required><br><br>
+    <input type="number" name="sqft" value="<?php echo htmlspecialchars($row["sqft"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
-    <button type="submit">Save Changes</button>
+    <button type="submit" style="width: 100%; padding: 0.8rem; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Save Changes</button>
 </form>
 
-<p><a href="admin-listings.php">Back to Admin Listings</a></p>
+<p style="text-align: center; margin-top: 1rem;"><a href="admin-listings.php" style="color: var(--primary-color); text-decoration: none;">Back to Admin Listings</a></p>
 
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

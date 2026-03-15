@@ -66,6 +66,8 @@ foreach ($pages as $file => $label) {
     <link rel="icon" href="media/favicon.ico">
     <title>Horizon Realty - Monitoring Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .status-online {
             color: green;
@@ -138,6 +140,7 @@ foreach ($pages as $file => $label) {
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="help.html">HELP</a></li>
                 <li><a href="monitor.php" class="active">MONITOR</a></li>
+                <li><a href="login.php">ADMIN LOGIN</a></li>
             </ul>
         </nav>
     </header>

@@ -13,7 +13,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Horizon Realty Mortgage Calculator - Estimate monthly payments based on loan amount, term, and rate.">
+    <meta name="description"
+        content="Horizon Realty Mortgage Calculator - Estimate monthly payments based on loan amount, term, and rate.">
     <meta name="keywords" content="mortgage calculator, monthly payment, loan estimate, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="media/favicon.ico">
@@ -22,26 +23,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .estimator-form-box { max-width: 600px; margin: 2rem auto; padding: 2rem; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        .estimator-form-box label { display: block; margin-top: 1rem; font-weight: 600; }
-        .estimator-form-box input, .estimator-form-box select { width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        .estimator-form-box button { margin-top: 1.5rem; padding: 0.8rem 2rem; background: var(--primary-color); color: #fffefe; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; }
-        .estimator-form-box button:hover { background: var(--secondary-color); }
-        #quoteResult { margin-top: 1.5rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px; display: none; }
+        .estimator-form-box {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .estimator-form-box label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .estimator-form-box input,
+        .estimator-form-box select {
+            width: 100%;
+            padding: 0.6rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .estimator-form-box button {
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: #fffefe;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .estimator-form-box button:hover {
+            background: var(--secondary-color);
+        }
+
+        #quoteResult {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+            display: none;
+        }
     </style>
 </head>
 
 <body class="spring-theme">
     <header>
+        
         <div class="header-container">
-            <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <div class="logo">
+            <img src="media/logo.png" alt="Horizon Realty Logo">
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
@@ -69,6 +113,7 @@
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="help.html#calculator">HELP</a></li>
+                <li><a href="login.php">ADMIN LOGIN</a></li>
             </ul>
         </nav>
         </div>
@@ -86,7 +131,8 @@
                 </div>
                 <div class="estimator-instructions">
                     <h3>Get a Payment Quote</h3>
-                    <p>Use the form below to estimate your monthly mortgage payment based on loan amount, term, and interest rate. This is for illustration only; contact us for pre-approval.</p>
+                    <p>Use the form below to estimate your monthly mortgage payment based on loan amount, term, and
+                        interest rate. This is for illustration only; contact us for pre-approval.</p>
                     <!-- Dynamic form for mortgage quote -->
                     <div class="estimator-form-box">
                         <form id="mortgageForm">
@@ -108,7 +154,9 @@
                         <div id="quoteResult"></div>
                     </div>
                     <p class="disclaimer">
-                        <i class="fas fa-exclamation-circle"></i> This calculator provides estimates only. Actual terms depend on your credit and lender. For personalized advice, <a href="contact.html">contact us</a>.
+                        <i class="fas fa-exclamation-circle"></i> This calculator provides estimates only. Actual terms
+                        depend on your credit and lender. For personalized advice, <a href="contact.html">contact
+                            us</a>.
                     </p>
                 </div>
             </div>
@@ -123,7 +171,7 @@
     <script src="scripts.js"></script>
     <script>
         // Mortgage quote form: calculate monthly payment and display result
-        document.getElementById('mortgageForm').addEventListener('submit', function(e) {
+        document.getElementById('mortgageForm').addEventListener('submit', function (e) {
             e.preventDefault();
             var P = parseFloat(document.getElementById('loanAmount').value);
             var y = parseInt(document.getElementById('termYears').value, 10);
@@ -137,4 +185,5 @@
         });
     </script>
 </body>
+
 </html>

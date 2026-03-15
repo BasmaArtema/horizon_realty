@@ -21,7 +21,8 @@ CREATE TABLE listings (
 );
 
 USE abouart_horizon_realty;
-INSERT INTO listings VALUES
+
+INSERT INTO listings (id, title, category, price, address, image, beds, baths, sqft) VALUES
 ('L001','Maple Grove Family Home','single-family',789000,'124 Maple Grove Dr','RFH1.jpg',4,3,2400),
 ('L002','Vintage Colonial Estate','single-family',925000,'88 Heritage Lane','RFH2.jpg',5,4,3200),
 ('L003','Modern Prairie House','single-family',675000,'200 Sunset Blvd','RFH3.jpg',3,2,2100),
@@ -31,7 +32,17 @@ INSERT INTO listings VALUES
 ('L007','Platinum Harmony Townhome','townhomes',565000,'12 Harmony Way','SR1.jpg',3,2,1800),
 ('L008','Golden Eternity Townhome','townhomes',620000,'7 Eternity Lane','SR2.jpg',4,3,2200),
 ('L009','Celestial Pair Duplex','townhomes',598000,'33 Celestial Dr','SR3.jpg',3,2,1900),
-('L010','Titanium Sovereign Estate','luxury',2450000,'1 Sovereign Hill','LX1.jpg',6,5,5000);
+('L010','Titanium Sovereign Estate','luxury',2450000,'1 Sovereign Hill','RHIM1.jpg',6,5,5000),
+('L011','Crystal Lake Mansion','luxury',3250000,'22 Crystal Lake Rd','RHIM2.jpg',7,6,6200),
+('L012','Downtown Office Complex','commercial',1850000,'450 Business Ave','N1.jpg',0,4,9000),
+('L013','Retail Plaza Investment','commercial',2100000,'78 Market Street','N2.jpg',0,6,11000),
+('L014','Greenfield Development Land','land',350000,'Rural Route 6','L1.jpg',0,0,0),
+('L015','Lakeside Expansion Parcel','land',475000,'Lakeview Drive','L2.jpg',0,0,0),
+('L016','Urban Apartment Rental','rentals',2500,'10 Downtown St','N1.jpg',2,1,900),
+('L017','Suburban Family Rental','rentals',3200,'55 Maple Court','N2.jpg',3,2,1500),
+('L018','Duplex Investment Property','multi-family',780000,'120 Elm Street','SR2.jpg',4,3,2800),
+('L019','Triplex City Investment','multi-family',920000,'89 King Ave','SR3.jpg',6,4,3500),
+('L020','Mountain View Vacation Home','vacation',425000,'77 Alpine Road','vac1.jpg',3,2,1400);
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,

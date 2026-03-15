@@ -1,28 +1,39 @@
+<?php
+$category = "townhomes";
+?>
+
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
   Authors: Parmida Khashayar, Haleema Bibi, and Basma Abou Artema
   Date: 2026-03-26
   Notes:
-    - This is the Mortgage Calculator Help page for Horizon Realty, providing documentation on how to use the mortgage calculator tool and understand its inputs and outputs.
+    - This is the Townhomes listings page for Horizon Realty, showcasing properties with courtyard, garden, and pool views, as well as garage options.
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Financial Tools - Help</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="help.css">
-    <script src="scripts.js" defer></script>
+    <meta name="description" content="Horizon Realty - Townhomes for sale. Courtyard, garden, and pool views with garage options.">
+    <meta name="keywords" content="townhomes for sale, townhouses, Horizon Realty">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="media/favicon.ico">
+    <title>Horizon Realty - Townhomes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<header>
-    <h1>Horizon Realty Help Wiki</h1>
-    <nav>
+<body class="spring-theme">
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
                 <li class="dropdown">
@@ -30,7 +41,7 @@
                     <ul class="dropdown-content" aria-label="Listing categories">
                         <li><a href="single-family.php">SINGLE FAMILY</a></li>
                         <li><a href="condos.php">CONDOS</a></li>
-                        <li><a href="townhomes.php">TOWNHOMES</a></li>
+                        <li><a href="townhomes.php" class="active">TOWNHOMES</a></li>
                         <li><a href="luxury-estates.php">LUXURY ESTATES</a></li>
                         <li><a href="commercial.php">COMMERCIAL</a></li>
                         <li><a href="land.php">LAND</a></li>
@@ -41,7 +52,7 @@
                         <li><a href="waterfront.php">WATERFRONT</a></li>
                     </ul>
                 </li>
-                <li><a href="featured.html" class="active">FEATURED</a></li>
+                <li><a href="featured.html">FEATURED</a></li>
                 <li><a href="market-stats.html">MARKET STATS</a></li>
                 <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
                 <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
@@ -51,49 +62,15 @@
                 <li><a href="help.html">HELP</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
-<main>
-<section class="help-container">
+    <main class="house-collection">
+        <h2>TOWNHOMES</h2>
+        <div class="product-grid">
+            <?php include 'php/listings-by-category.php'; ?>
+        </div>
+    </main>
 
-    <div class="help-sidebar">
-        <ul class="help-menu">
-            <li><a href="wiki-welcome.html">Welcome</a></li>
-            <li><a href="wiki-listings.html">Browsing Listings</a></li>
-            <li><a href="wiki-calculator.html" class="active">Financial Tools</a></li>
-            <li><a href="wiki-api.html">Live Data APIs</a></li>
-            <li><a href="wiki-admin.html">Admin Guide</a></li>
-        </ul>
-    </div>
-
-    <div class="help-content">
-        <h2>Mortgage Calculator</h2>
-
-        <h3>Inputs</h3>
-        <ul>
-            <li>Loan Amount (CAD)</li>
-            <li>Term (Years)</li>
-            <li>Interest Rate (%)</li>
-        </ul>
-
-        <h3>How It Works</h3>
-        <p>
-            JavaScript calculates estimated monthly payments using
-            mortgage amortization formulas.
-        </p>
-
-        <p>
-            Results are for estimation only. Contact an agent
-            for official financing approval.
-        </p>
-    </div>
-
-</section>
-</main>
-
-<footer>
-    <p>&copy; 2026 Horizon Realty</p>
-</footer>
-
+    <script src="scripts.js"></script>
 </body>
 </html>

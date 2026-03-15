@@ -1,28 +1,39 @@
+<?php
+$category = "new-developments";
+?>
+
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
   Authors: Parmida Khashayar, Haleema Bibi, and Basma Abou Artema
   Date: 2026-03-26
   Notes:
-    - This is the Mortgage Calculator Help page for Horizon Realty, providing documentation on how to use the mortgage calculator tool and understand its inputs and outputs.
+    - This is the New Developments listings page for Horizon Realty.
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Financial Tools - Help</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="help.css">
-    <script src="scripts.js" defer></script>
+    <meta name="description" content="Horizon Realty - New development properties for sale.">
+    <meta name="keywords" content="new developments, new homes, real estate, Horizon Realty">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="media/favicon.ico">
+    <title>Horizon Realty - New Developments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<header>
-    <h1>Horizon Realty Help Wiki</h1>
-    <nav>
+<body class="spring-theme">
+    <header>
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
                 <li class="dropdown">
@@ -36,12 +47,12 @@
                         <li><a href="land.php">LAND</a></li>
                         <li><a href="rentals.php">RENTALS</a></li>
                         <li><a href="multi-family.php">MULTI-FAMILY</a></li>
-                        <li><a href="new-developments.php">NEW DEVELOPMENTS</a></li>
+                        <li><a href="new-developments.php" class="active">NEW DEVELOPMENTS</a></li>
                         <li><a href="vacation-properties.php">VACATION</a></li>
                         <li><a href="waterfront.php">WATERFRONT</a></li>
                     </ul>
                 </li>
-                <li><a href="featured.html" class="active">FEATURED</a></li>
+                <li><a href="featured.html">FEATURED</a></li>
                 <li><a href="market-stats.html">MARKET STATS</a></li>
                 <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
                 <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
@@ -51,49 +62,18 @@
                 <li><a href="help.html">HELP</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
-<main>
-<section class="help-container">
+    <main>
+        <section class="house-collection">
+            <h2>NEW DEVELOPMENTS</h2>
+            <div class="product-grid">
+                <?php include 'php/listings-by-category.php'; ?>
+            </div>
+        </section>
+    </main>
 
-    <div class="help-sidebar">
-        <ul class="help-menu">
-            <li><a href="wiki-welcome.html">Welcome</a></li>
-            <li><a href="wiki-listings.html">Browsing Listings</a></li>
-            <li><a href="wiki-calculator.html" class="active">Financial Tools</a></li>
-            <li><a href="wiki-api.html">Live Data APIs</a></li>
-            <li><a href="wiki-admin.html">Admin Guide</a></li>
-        </ul>
-    </div>
-
-    <div class="help-content">
-        <h2>Mortgage Calculator</h2>
-
-        <h3>Inputs</h3>
-        <ul>
-            <li>Loan Amount (CAD)</li>
-            <li>Term (Years)</li>
-            <li>Interest Rate (%)</li>
-        </ul>
-
-        <h3>How It Works</h3>
-        <p>
-            JavaScript calculates estimated monthly payments using
-            mortgage amortization formulas.
-        </p>
-
-        <p>
-            Results are for estimation only. Contact an agent
-            for official financing approval.
-        </p>
-    </div>
-
-</section>
-</main>
-
-<footer>
-    <p>&copy; 2026 Horizon Realty</p>
-</footer>
-
+    <script src="scripts.js"></script>
 </body>
+
 </html>

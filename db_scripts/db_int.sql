@@ -33,3 +33,21 @@ INSERT INTO listings VALUES
 ('L009','Celestial Pair Duplex','townhomes',598000,'33 Celestial Dr','SR3.jpg',3,2,1900),
 ('L010','Titanium Sovereign Estate','luxury',2450000,'1 Sovereign Hill','LX1.jpg',6,5,5000);
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL DEFAULT 'user',
+    status VARCHAR(20) NOT NULL DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (full_name, email, password, role, status)
+VALUES (
+    'Admin User',
+    'admin@horizonrealty.com',
+    '$2y$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+    'admin',
+    'active'
+);

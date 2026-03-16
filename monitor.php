@@ -114,6 +114,13 @@ foreach ($pages as $file => $label) {
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.php">HOME</a></li>
+                <?php if (isset($_SESSION["user_id"])) { ?>
+                    <li><a href="profile.php">PROFILE</a></li>
+                    <li><a href="logout.php">LOGOUT</a></li>
+                <?php } else { ?>
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="register.php">REGISTER</a></li>
+                <?php } ?>
                 <li class="dropdown">
                     <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
                     <ul class="dropdown-content" aria-label="Listing categories">
@@ -138,13 +145,6 @@ foreach ($pages as $file => $label) {
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="help.html">HELP</a></li>
-                <?php if (isset($_SESSION["user_id"])) { ?>
-                    <li><a href="profile.php">PROFILE</a></li>
-                    <li><a href="logout.php">LOGOUT</a></li>
-                <?php } else { ?>
-                    <li><a href="login.php">LOGIN</a></li>
-                    <li><a href="register.php">REGISTER</a></li>
-                <?php } ?>
                 <li><a href="monitor.php" class="active">MONITOR</a></li>
             </ul>
         </nav>

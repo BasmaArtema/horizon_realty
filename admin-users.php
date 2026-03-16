@@ -80,7 +80,13 @@ $result = $conn->query("SELECT id, full_name, email, role, status FROM users ORD
 
 </table>
 
-<p><a href="profile.php">Back to Profile</a></p>
+<p>
+<a href="profile.php">Back to Profile</a> |
+<a href="index.php">Home</a> |
+<a href="logout.php">Logout</a>
+</p>
+
+<hr>
 
 </body>
 </html>

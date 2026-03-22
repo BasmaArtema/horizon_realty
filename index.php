@@ -3,8 +3,8 @@
   Purpose: Real estate website
   Authors: Parmida Khashayar, Haleema Bibi, and Basma Abou Artema
   Date: 2026-03-26
-  Notes:
-    - This is the main homepage for Horizon Realty and now acts as a full showcase page for the site's catalog, tools, documentation, and admin features.
+    Notes:
+    - This is the main homepage for Horizon Realty and is designed to spotlight the property catalog first.
 -->
 
 <?php session_start(); ?>
@@ -84,49 +84,22 @@
         <section class="home-hero">
             <div class="home-hero-backdrop"></div>
             <div class="home-hero-content">
-                <span class="home-eyebrow">Complete Real Estate Experience</span>
-                <h1>Browse, compare, calculate, manage, and learn from one polished property platform.</h1>
-                <p>Horizon Realty brings together property categories, live market tools, admin controls, help guides, user accounts, themes, and multimedia pages into one cohesive real estate website.</p>
+                <span class="home-eyebrow">Property Listings First</span>
+                <h1>Discover standout homes, investment properties, and destination listings in one refined catalog.</h1>
+                <p>Start with featured homes, explore by property type, and move through the site with tools and guides that support every step of the search.</p>
                 <div class="home-hero-actions">
                     <a href="featured.php" class="home-cta primary">Explore Featured Homes</a>
-                    <a href="market-stats.php" class="home-cta secondary">View Live Market Tools</a>
+                    <a href="single-family.php" class="home-cta secondary">Browse All Categories</a>
                 </div>
             </div>
             <div class="home-hero-card">
-                <h2>What This Site Includes</h2>
+                <h2>Start Your Search Here</h2>
                 <ul class="home-highlight-list">
-                    <li><i class="fas fa-house"></i><span>11 property categories with shared listing rendering</span></li>
-                    <li><i class="fas fa-user-lock"></i><span>Public, private, and admin experiences</span></li>
-                    <li><i class="fas fa-chart-column"></i><span>Weather, exchange-rate tools, and live charting</span></li>
-                    <li><i class="fas fa-circle-question"></i><span>Help center, wiki pages, and guided support</span></li>
+                    <li><i class="fas fa-house"></i><span>Browse homes across 11 listing categories</span></li>
+                    <li><i class="fas fa-star"></i><span>Jump into featured properties and curated highlights</span></li>
+                    <li><i class="fas fa-location-dot"></i><span>Explore waterfront, vacation, luxury, and city living</span></li>
+                    <li><i class="fas fa-calculator"></i><span>Use built-in buyer tools once you find a property you love</span></li>
                 </ul>
-            </div>
-        </section>
-
-        <section class="home-overview">
-            <article class="home-section-intro">
-                <span class="home-section-label">Site Overview</span>
-                <h2>A homepage that introduces the full project, not just one feature.</h2>
-                <p>This landing page highlights the catalog, user account flow, market tools, help and training pages, admin controls, multimedia content, and responsive design so visitors immediately understand the depth of the platform.</p>
-            </article>
-
-            <div class="home-stat-grid">
-                <div class="home-stat-card">
-                    <strong>20</strong>
-                    <span>Database-backed property records</span>
-                </div>
-                <div class="home-stat-card">
-                    <strong>3</strong>
-                    <span>Switchable site themes for logged-in users</span>
-                </div>
-                <div class="home-stat-card">
-                    <strong>5+</strong>
-                    <span>Help and wiki pages for guided support</span>
-                </div>
-                <div class="home-stat-card">
-                    <strong>10+</strong>
-                    <span>Dynamic PHP pages across the site</span>
-                </div>
             </div>
         </section>
 
@@ -174,9 +147,9 @@
 
         <section class="home-feature-grid">
             <article class="home-feature-panel">
-                <span class="home-section-label">Interactive Tools</span>
-                <h2>Live data and buyer tools</h2>
-                <p>Use the mortgage calculator, exchange-rate converter, market chart, and weather widget to make more informed decisions.</p>
+                <span class="home-section-label">Buyer Tools</span>
+                <h2>Plan around the properties you love</h2>
+                <p>Use the mortgage calculator, exchange-rate converter, market chart, and weather widget after narrowing down the listings that fit your goals.</p>
                 <div class="home-feature-links">
                     <a href="market-stats.php">Market Stats</a>
                     <a href="mortgage-calculator.php">Mortgage Calculator</a>
@@ -185,13 +158,13 @@
             </article>
 
             <article class="home-feature-panel">
-                <span class="home-section-label">User Experience</span>
-                <h2>Accounts, themes, and private pages</h2>
-                <p>Registered users can log in, view their profile, and personalize the site with Spring, Christmas, Classic, or Auto theme settings.</p>
+                <span class="home-section-label">Featured Paths</span>
+                <h2>Browse by lifestyle and property type</h2>
+                <p>Move from downtown condos to waterfront homes, vacation escapes, rentals, and new developments with category pages built for quick comparison.</p>
                 <div class="home-feature-links">
-                    <a href="register.php">Register</a>
-                    <a href="login.php">Login</a>
-                    <a href="profile.php">Profile</a>
+                    <a href="condos.php">Condos</a>
+                    <a href="luxury-estates.php">Luxury Estates</a>
+                    <a href="waterfront.php">Waterfront</a>
                 </div>
             </article>
 

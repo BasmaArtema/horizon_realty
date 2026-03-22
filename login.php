@@ -78,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <button type="submit" style="width: 100%; padding: 0.8rem; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Login</button>
 
     <br><br>
+    <p><a href="index.php"><i class="fas fa-house"></i> Back to Home</a></p>
     <p>Don't have an account? <a href="register.php">Register here</a></p>
 
 </form>

@@ -7,6 +7,7 @@
     - This is the main homepage for Horizon Realty, featuring a hero image and local weather information.
 -->
 
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +26,7 @@
 
 <body class="spring-theme">
     <header>
+<<<<<<< HEAD:index.html
         <div class="header-container">
             <div class="logo">
                 <img src="media/logo.png" alt="Horizon Realty Logo">
@@ -65,6 +67,51 @@
                 </ul>
             </nav>
         </div>
+=======
+        <h1>HORIZON REALTY</h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.php">HOME</a></li>
+                <?php if (isset($_SESSION["user_id"])) { ?>
+                    <li><span>Welcome, <?php echo htmlspecialchars($_SESSION["user_name"]); ?></span></li>
+                    <li><a href="profile.php">PROFILE</a></li>
+                    <li><a href="logout.php">LOGOUT</a></li>
+                <?php } else { ?>
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="register.php">REGISTER</a></li>
+                <?php } ?>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                    <ul class="dropdown-content" aria-label="Listing categories">
+                        <li><a href="single-family.php">SINGLE FAMILY</a></li>
+                        <li><a href="condos.php">CONDOS</a></li>
+                        <li><a href="townhomes.php">TOWNHOMES</a></li>
+                        <li><a href="luxury-estates.php">LUXURY ESTATES</a></li>
+                        <li><a href="commercial.php">COMMERCIAL</a></li>
+                        <li><a href="land.php">LAND</a></li>
+                        <li><a href="rentals.php">RENTALS</a></li>
+                        <li><a href="multi-family.php">MULTI-FAMILY</a></li>
+                        <li><a href="new-developments.php">NEW DEVELOPMENTS</a></li>
+                        <li><a href="vacation-properties.php">VACATION</a></li>
+                        <li><a href="waterfront.php">WATERFRONT</a></li>
+                    </ul>
+                </li>
+                <li><a href="featured.html">FEATURED</a></li>
+                <li><a href="market-stats.html">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+>>>>>>> haleema2001/main:index.php
     </header>
     <main>
         <section class="image-section">

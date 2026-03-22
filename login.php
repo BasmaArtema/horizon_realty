@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (isset($_SESSION["user_id"])) {
+    header("Location: profile.php");
+    exit();
+}
+
 include 'php/db.php';
 
 $message = "";
@@ -70,6 +76,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="password" name="password" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
 
     <button type="submit" style="width: 100%; padding: 0.8rem; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Login</button>
+
+    <br><br>
+    <p>Don't have an account? <a href="register.php">Register here</a></p>
 
 </form>
 

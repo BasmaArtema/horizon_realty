@@ -77,7 +77,19 @@ $result = $conn->query("SELECT id, full_name, email, role, status FROM users ORD
 
 <h1>User Administration</h1>
 
+<<<<<<< HEAD
 <table class="admin-table">
+=======
+<p>
+<a href="profile.php">Back to Profile</a> |
+<a href="index.php">Home</a> |
+<a href="logout.php">Logout</a>
+</p>
+
+<hr>
+
+<table border="1" cellpadding="10">
+>>>>>>> haleema2001/main
 <tr>
     <th>Name</th>
     <th>Email</th>
@@ -104,7 +116,17 @@ $result = $conn->query("SELECT id, full_name, email, role, status FROM users ORD
 
 </table>
 
+<<<<<<< HEAD
 <p style="text-align: center; margin-top: 2rem;"><a href="profile.php" style="display: inline-block; padding: 0.5rem 1rem; background: var(--primary-color); color: #fff; text-decoration: none; border-radius: 5px;">Back to Profile</a></p>
+=======
+<p>
+<a href="profile.php">Back to Profile</a> |
+<a href="index.php">Home</a> |
+<a href="logout.php">Logout</a>
+</p>
+
+<hr>
+>>>>>>> haleema2001/main
 
 </div>
 

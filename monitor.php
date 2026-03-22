@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'php/db.php';
 
 $services = [];
@@ -114,7 +115,14 @@ foreach ($pages as $file => $label) {
         </button>
         <nav>
             <ul class="nav-menu">
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <?php if (isset($_SESSION["user_id"])) { ?>
+                    <li><a href="profile.php">PROFILE</a></li>
+                    <li><a href="logout.php">LOGOUT</a></li>
+                <?php } else { ?>
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="register.php">REGISTER</a></li>
+                <?php } ?>
                 <li class="dropdown">
                     <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
                     <ul class="dropdown-content" aria-label="Listing categories">

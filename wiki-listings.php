@@ -1,34 +1,37 @@
-<!--
-  Project: Horizon Realty
-  Purpose: Real estate website
-  Authors: Parmida Khashayar, Haleema Bibi, and Basma Abou Artema
-  Date: 2026-03-26
-  Notes:
-    - This is the Browsing Listings Help page for Horizon Realty, providing documentation on how to navigate and understand the property listings on the site.
--->
-
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Learn how to browse listing categories and understand property options on Horizon Realty.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browsing Listings - Help</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/help.css">
-    <script src="assets/js/scripts.js" defer></script>
     <link rel="icon" href="assets/media/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="spring-theme">
 <div class="top-auth-bar">
-        <div class="top-auth-inner">
+    <div class="top-auth-inner">
+        <?php if (isset($_SESSION["user_id"])) { ?>
+            <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+            <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+        <?php } else { ?>
             <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
             <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
-        </div>
+        <?php } ?>
     </div>
-
+</div>
 <header>
-    <h1>Horizon Realty Help Wiki</h1>
-    <nav>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.php"><img src="assets/media/logo.png" alt="Horizon Realty Logo"></a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav>
             <ul class="nav-menu">
                 <li><a href="index.php">HOME</a></li>
                 <li class="dropdown">
@@ -54,64 +57,44 @@
                 <li><a href="buying-guide.php">BUYING GUIDE</a></li>
                 <li><a href="contact.php">CONTACT</a></li>
                 <li><a href="about.php">ABOUT US</a></li>
-                <li><a href="help.html">HELP</a></li>
-
-
+                <li><a href="help.php" class="active">HELP</a></li>
             </ul>
         </nav>
+    </div>
 </header>
-
 <main>
-<section class="help-container">
-
-    <div class="help-sidebar">
+<h2 class="help-title">Help Wiki</h2>
+<div class="help-container">
+    <aside class="help-sidebar">
         <h3>Help Topics</h3>
         <ul class="help-menu">
-            <li><a href="wiki-welcome.html">Welcome</a></li>
-            <li><a href="wiki-listings.html" class="active">Browsing Listings</a></li>
-            <li><a href="wiki-calculator.html">Financial Tools</a></li>
-            <li><a href="wiki-api.html">Live Data APIs</a></li>
-            <li><a href="wiki-admin.html">Admin Guide</a></li>
+            <li><a href="wiki-welcome.php">Welcome</a></li>
+            <li><a href="wiki-listings.php" class="active">Browsing Listings</a></li>
+            <li><a href="wiki-calculator.php">Financial Tools</a></li>
+            <li><a href="wiki-api.php">Live Data APIs</a></li>
+            <li><a href="wiki-admin.php">Admin Guide</a></li>
         </ul>
-    </div>
-
-    <div class="help-content">
+    </aside>
+    <section class="help-section">
         <h2>Browsing Listings</h2>
-
-        <p>Properties are organized into categories such as:</p>
-        <ul>
-            <li>Single Family</li>
-            <li>Condos</li>
-            <li>Townhomes</li>
-            <li>Luxury Estates</li>
-            <li>Commercial</li>
-            <li>Waterfront</li>
-            <li>New Developments</li>
-        </ul>
-
+        <p>Properties are organized into categories such as Single Family, Condos, Townhomes, Luxury Estates, Commercial, Waterfront, and New Developments.</p>
         <h3>How to Navigate</h3>
         <ul>
-            <li>Use the LISTINGS dropdown menu.</li>
-            <li>Select a category page.</li>
-            <li>Click <strong>View Details</strong> to open the property page.</li>
+            <li>Use the LISTINGS dropdown menu in the main navigation.</li>
+            <li>Select a category page to filter properties by type.</li>
+            <li>Review the listing card for price, size, and product options.</li>
         </ul>
-
         <h3>Property Options</h3>
-        <p>
-            Each listing may show options such as parking type, view type,
-            or interior finish.
-        </p>
-    </div>
-
-</section>
+        <p>Each listing card displays two explicit options, such as view type, garage type, layout style, or special feature, to help users compare properties more easily.</p>
+    </section>
+</div>
 </main>
-
 <footer>
     <div class="footer-container">
         <p>&copy; 2026 Horizon Realty. All rights reserved.</p>
         <p>Find your dream home with us.</p>
     </div>
 </footer>
-
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>

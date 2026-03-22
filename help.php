@@ -89,11 +89,11 @@
         <h3>Documentation</h3>
         <ul class="help-menu">
             <li><a href="help.php" class="active"><i class="fas fa-home"></i> Overview</a></li>
-            <li><a href="wiki-welcome.html"><i class="fas fa-star"></i> Welcome Page</a></li>
-            <li><a href="wiki-listings.html"><i class="fas fa-building"></i> Listings</a></li>
-            <li><a href="wiki-calculator.html"><i class="fas fa-calculator"></i> Mortgage Calculator</a></li>
-            <li><a href="wiki-api.html"><i class="fas fa-code"></i> API / JavaScript</a></li>
-            <li><a href="wiki-admin.html"><i class="fas fa-user-shield"></i> Admin Panel</a></li>
+            <li><a href="wiki-welcome.php"><i class="fas fa-star"></i> Welcome Page</a></li>
+            <li><a href="wiki-listings.php"><i class="fas fa-building"></i> Listings</a></li>
+            <li><a href="wiki-calculator.php"><i class="fas fa-calculator"></i> Mortgage Calculator</a></li>
+            <li><a href="wiki-api.php"><i class="fas fa-code"></i> API / JavaScript</a></li>
+            <li><a href="wiki-admin.php"><i class="fas fa-user-shield"></i> Admin Panel</a></li>
         </ul>
     </aside>
 

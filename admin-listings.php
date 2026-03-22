@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'php/db.php';
+include 'includes/db.php';
 
 if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
@@ -21,9 +21,9 @@ $result = $conn->query("SELECT id, title, category, price FROM listings ORDER BY
     <meta name="description" content="Admin listing management for Horizon Realty">
     <meta name="keywords" content="admin, listings, edit listings, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Horizon Realty - Admin Listings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -90,6 +90,6 @@ $result = $conn->query("SELECT id, title, category, price FROM listings ORDER BY
 
 </div>
 
-<script src="scripts.js"></script>
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>

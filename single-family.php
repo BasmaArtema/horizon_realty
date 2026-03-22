@@ -19,9 +19,9 @@ $category = "single-family";
     <meta name="description" content="Horizon Realty - Single family homes for sale. Browse listings with garden, street, and water views.">
     <meta name="keywords" content="single family homes, houses for sale, real estate, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Horizon Realty - Single Family Homes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
 </head>
 <body class="spring-theme">
@@ -34,7 +34,7 @@ $category = "single-family";
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -79,12 +79,12 @@ $category = "single-family";
         <section class="house-collection">
             <h2>SINGLE FAMILY HOMES</h2>
             <div class="product-grid">
-                <?php include 'php/listings-by-category.php'; ?>
+                <?php include 'includes/listings-by-category.php'; ?>
             </div>
         </section>
     </main>
 
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

@@ -19,10 +19,10 @@
     <meta name="description" content="Horizon Realty - Virtual tour and listing details. Explore properties and options.">
     <meta name="keywords" content="virtual tour, property details, real estate, Horizon Realty">
     <title>Virtual Tour - Horizon Realty</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
 </head>
 <body class="spring-theme">
 <div class="top-auth-bar">
@@ -39,7 +39,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -83,8 +83,8 @@
     <main class="preview-page">
         <div class="preview-content">
             <div class="video-container">
-                <video autoplay controls muted loop playsinline poster="media/interior.jpg">
-                    <source src="media/video3.mp4" type="video/mp4">
+                <video autoplay controls muted loop playsinline poster="assets/media/interior.jpg">
+                    <source src="assets/media/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -124,6 +124,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

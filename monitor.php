@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'php/db.php';
+include 'includes/db.php';
 
 $services = [];
 
@@ -64,9 +64,9 @@ foreach ($pages as $file => $label) {
     <meta name="description" content="Horizon Realty website monitoring page">
     <meta name="keywords" content="monitoring, website status, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Horizon Realty - Monitoring Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -118,42 +118,46 @@ foreach ($pages as $file => $label) {
         </div>
     </div>
     <header>
-        <h1>HORIZON REALTY</h1>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.php">HOME</a></li>
-                <li class="dropdown">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
-                    <ul class="dropdown-content" aria-label="Listing categories">
-                        <li><a href="single-family.php">SINGLE FAMILY</a></li>
-                        <li><a href="condos.php">CONDOS</a></li>
-                        <li><a href="townhomes.php">TOWNHOMES</a></li>
-                        <li><a href="luxury-estates.php">LUXURY ESTATES</a></li>
-                        <li><a href="commercial.php">COMMERCIAL</a></li>
-                        <li><a href="land.php">LAND</a></li>
-                        <li><a href="rentals.php">RENTALS</a></li>
-                        <li><a href="multi-family.php">MULTI-FAMILY</a></li>
-                        <li><a href="new-developments.php">NEW DEVELOPMENTS</a></li>
-                        <li><a href="vacation-properties.php">VACATION</a></li>
-                        <li><a href="waterfront.php">WATERFRONT</a></li>
-                    </ul>
-                </li>
-                <li><a href="featured.php">FEATURED</a></li>
-                <li><a href="market-stats.php">MARKET STATS</a></li>
-                <li><a href="mortgage-calculator.php">MORTGAGE CALCULATOR</a></li>
-                <li><a href="virtual-tour.php">VIRTUAL TOUR</a></li>
-                <li><a href="buying-guide.php">BUYING GUIDE</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
-                <li><a href="about.php">ABOUT US</a></li>
-                <li><a href="help.html">HELP</a></li>
-                <li><a href="monitor.php" class="active">MONITOR</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.php">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
+                        <ul class="dropdown-content" aria-label="Listing categories">
+                            <li><a href="single-family.php">SINGLE FAMILY</a></li>
+                            <li><a href="condos.php">CONDOS</a></li>
+                            <li><a href="townhomes.php">TOWNHOMES</a></li>
+                            <li><a href="luxury-estates.php">LUXURY ESTATES</a></li>
+                            <li><a href="commercial.php">COMMERCIAL</a></li>
+                            <li><a href="land.php">LAND</a></li>
+                            <li><a href="rentals.php">RENTALS</a></li>
+                            <li><a href="multi-family.php">MULTI-FAMILY</a></li>
+                            <li><a href="new-developments.php">NEW DEVELOPMENTS</a></li>
+                            <li><a href="vacation-properties.php">VACATION</a></li>
+                            <li><a href="waterfront.php">WATERFRONT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="featured.php">FEATURED</a></li>
+                    <li><a href="market-stats.php">MARKET STATS</a></li>
+                    <li><a href="mortgage-calculator.php">MORTGAGE CALCULATOR</a></li>
+                    <li><a href="virtual-tour.php">VIRTUAL TOUR</a></li>
+                    <li><a href="buying-guide.php">BUYING GUIDE</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a href="about.php">ABOUT US</a></li>
+                    <li><a href="help.html">HELP</a></li>
+                    <li><a href="monitor.php" class="active">MONITOR</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="monitor-wrapper">
@@ -177,6 +181,6 @@ foreach ($pages as $file => $label) {
         </table>
     </main>
 
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

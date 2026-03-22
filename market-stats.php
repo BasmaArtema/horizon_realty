@@ -17,9 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Horizon Realty - Market stats: exchange rates and currency converter for international buyers.">
     <meta name="keywords" content="exchange rates, currency converter, real estate market, Horizon Realty">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Market Stats - Horizon Realty</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
 </head>
 <body class="spring-theme">
@@ -37,7 +37,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -128,8 +128,8 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
-    <script src="market-stats-script.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/market-stats-script.js"></script>
 </body>
 
 </html>

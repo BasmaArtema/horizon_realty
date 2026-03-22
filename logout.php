@@ -12,8 +12,8 @@ session_destroy();
     <meta name="description" content="Logging out from Horizon Realty.">
     <meta name="keywords" content="logout, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/media/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -29,7 +29,7 @@ session_destroy();
 
 </div>
 
-<script src="scripts.js"></script>
+<script src="assets/js/scripts.js"></script>
 <script>
     // Redirect after 3 seconds
     setTimeout(function() {

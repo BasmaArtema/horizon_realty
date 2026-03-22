@@ -20,9 +20,9 @@
         content="Horizon Realty - Featured listings. Top picks in single family, condos, and luxury.">
     <meta name="keywords" content="featured listings, top homes, real estate, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Horizon Realty - Featured Listings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -41,7 +41,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="product-grid">
                     <div class="product-card" data-categories="single-family">
-                        <img src="media/g1.jpg" alt="Maple Grove Family Home">
+                        <img src="assets/media/g1.jpg" alt="Maple Grove Family Home">
                         <div class="gift-badge"><i class="fas fa-home"></i> Popular</div>
                         <h3>Maple Grove Family Home</h3>
                         <p class="product-type">4 bed • 3 bath • 2,400 sq ft • furnished or unfurnished</p>
@@ -101,7 +101,7 @@
                         <a href="virtual-tour.php?listing=L001" class="view-details">View Details</a>
                     </div>
                     <div class="product-card" data-categories="condos,luxury">
-                        <img src="media/g2.jpg" alt="Skyline Penthouse">
+                        <img src="assets/media/g2.jpg" alt="Skyline Penthouse">
                         <div class="gift-badge"><i class="fas fa-star"></i> Premium</div>
                         <h3>Skyline Penthouse</h3>
                         <p class="product-type">3 bed • 3 bath • 2,800 sq ft • with or without balcony</p>
@@ -109,7 +109,7 @@
                         <a href="virtual-tour.php?listing=L006" class="view-details">View Details</a>
                     </div>
                     <div class="product-card" data-categories="luxury">
-                        <img src="media/RFH2.jpg" alt="Vintage Colonial Estate">
+                        <img src="assets/media/RFH2.jpg" alt="Vintage Colonial Estate">
                         <h3>Vintage Colonial Estate</h3>
                         <p class="product-type">5 bed • 4 bath • 3,200 sq ft • historic or renovated</p>
                         <p class="product-price">$925,000 CAD</p>
@@ -149,7 +149,7 @@
             <p>Find your dream home with us.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

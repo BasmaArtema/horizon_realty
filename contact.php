@@ -18,8 +18,8 @@
     <meta name="description" content="Contact Horizon Realty - Schedule viewings, property inquiries, and general questions.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Horizon Realty</title>
-    <link rel="icon" href="media/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/media/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -40,7 +40,7 @@
  
     <div class="header-container">
         <div class="logo">
-            <img src="media/logo.png" alt="Horizon Realty Logo">
+            <img src="assets/media/logo.png" alt="Horizon Realty Logo">
         </div>
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
             <span></span>
@@ -82,7 +82,7 @@
 </header>
 
 <section class="image-section">
-    <img src="media/interior.jpg" alt="Horizon Realty - Contact us for your dream home">
+    <img src="assets/media/interior.jpg" alt="Horizon Realty - Contact us for your dream home">
 </section>
 
 <main class="contact-section">
@@ -131,7 +131,7 @@
         </div>
     </footer>
 
-<script src="scripts.js"></script>
+<script src="assets/js/scripts.js"></script>
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();

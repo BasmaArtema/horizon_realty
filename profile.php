@@ -19,8 +19,8 @@ $role = $_SESSION["user_role"];
     <meta name="description" content="User profile for Horizon Realty.">
     <meta name="keywords" content="profile, account, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/media/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -62,6 +62,6 @@ $role = $_SESSION["user_role"];
     <?php } ?>
 </div>
 
-<script src="scripts.js"></script>
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>

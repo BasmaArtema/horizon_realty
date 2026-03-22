@@ -49,13 +49,14 @@ Open `index.php` in your web browser to view the website.
 
 ## Project Structure
 - `index.php`: Main homepage
-- `styles.css`: Stylesheet
-- `scripts.js`: JavaScript functionality
-- Various HTML files for different pages
-- `php/`: Server-side scripts
-- `db_scripts/`: Database setup scripts
-- `media/`: Images and media files
-- `ADMIN_DOCUMENTATION.md`: Admin user setup and usage guide
+- `assets/css/`: Shared stylesheets
+- `assets/js/`: JavaScript files
+- `assets/media/`: Images, video, and icons
+- `data/`: Data files such as `listings.json`
+- `includes/`: Shared PHP includes
+- `database/`: Database setup scripts
+- `docs/`: Project documentation
+- Various PHP and HTML files for site pages
 
 ## Contributing
 1. Fork the repository

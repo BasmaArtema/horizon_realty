@@ -19,9 +19,9 @@ $category = "rentals";
     <meta name="description" content="Horizon Realty - Rental properties available.">
     <meta name="keywords" content="rentals, apartments for rent, houses for rent, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Horizon Realty - Rentals</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
 </head>
 <body class="spring-theme">
@@ -34,7 +34,7 @@ $category = "rentals";
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -79,7 +79,7 @@ $category = "rentals";
         <section class="house-collection">
             <h2>RENTALS</h2>
             <div class="product-grid">
-                <?php include 'php/listings-by-category.php'; ?>
+                <?php include 'includes/listings-by-category.php'; ?>
             </div>
         </section>
     </main>
@@ -91,7 +91,7 @@ $category = "rentals";
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

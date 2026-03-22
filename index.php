@@ -18,10 +18,11 @@
         content="Horizon Realty - Browse homes, condos, townhomes, and land. Spring, Christmas, and Classic themes.">
     <meta name="keywords" content="real estate, homes for sale, condos, townhomes, property listings, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Horizon Realty - Find Your Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="spring-theme">
@@ -39,7 +40,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -79,7 +80,7 @@
     </header>
     <main>
         <section class="image-section">
-            <img src="media/interior.jpg" alt="Horizon Realty - Modern home exterior">
+            <img src="assets/media/interior.jpg" alt="Horizon Realty - Modern home exterior">
         </section>
         <!-- Weather widget (Open-Meteo API - no key required) -->
         <section class="weather-widget" id="weatherSection">
@@ -95,7 +96,7 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script>
         // API #2: Open-Meteo Weather (free, no API key) - for local weather on home page
         (function() {

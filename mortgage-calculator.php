@@ -19,9 +19,9 @@
         content="Horizon Realty Mortgage Calculator - Estimate monthly payments based on loan amount, term, and rate.">
     <meta name="keywords" content="mortgage calculator, monthly payment, loan estimate, Horizon Realty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>Mortgage Calculator - Horizon Realty</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -90,7 +90,7 @@
         
         <div class="header-container">
         <div class="logo">
-            <img src="media/logo.png" alt="Horizon Realty Logo">
+            <img src="assets/media/logo.png" alt="Horizon Realty Logo">
         </div>
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
             <span></span>
@@ -135,8 +135,8 @@
             <h2 class="house-price-title">MORTGAGE CALCULATOR</h2>
             <div class="estimator-container">
                 <div class="video-guide">
-                    <video controls poster="media/estimator-poster.jpg">
-                        <source src="media/video2.mp4" type="video/mp4">
+                    <video controls poster="assets/media/estimator-poster.jpg">
+                        <source src="assets/media/video2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <p class="video-caption">Quick guide: use the form to get a monthly payment estimate.</p>
@@ -180,7 +180,7 @@
             <p>Find your dream home with us.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script>
         // Mortgage quote form: calculate monthly payment and display result
         document.getElementById('mortgageForm').addEventListener('submit', function (e) {

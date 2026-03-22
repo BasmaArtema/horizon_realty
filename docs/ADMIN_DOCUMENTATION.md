@@ -4,7 +4,7 @@
 This document provides detailed information about the admin user setup and functionality for the Horizon Realty website.
 
 ## Admin User Setup
-The database includes a default admin user for managing the website's backend functionality. This user is created during the database initialization process using the `db_scripts/db_int.sql` script.
+The database includes a default admin user for managing the website's backend functionality. This user is created during the database initialization process using the `database/db_int.sql` script.
 
 ### Default Admin Credentials
 - **Email**: admin@horizonrealty.com
@@ -39,7 +39,7 @@ The following PHP files provide admin functionality:
 
 ## Security Best Practices
 - **Change Default Password**: Immediately change the default admin password after initial setup.
-- **Secure Database**: Ensure database connection details in `php/db.php` are protected and not exposed in version control.
+- **Secure Database**: Ensure database connection details in `includes/db.php` are protected and not exposed in version control.
 - **HTTPS**: Use HTTPS in production environments to secure admin sessions.
 - **Logging**: Implement logging for admin actions for audit trails.
 - **Access Control**: Regularly review and update user roles and permissions.
@@ -47,13 +47,13 @@ The following PHP files provide admin functionality:
 
 ## Database Initialization
 To set up the admin user:
-1. Run the `db_scripts/db_int.sql` script on your MySQL database.
+1. Run the `database/db_int.sql` script on your MySQL database.
 2. This will create the necessary tables and insert the default admin user.
 3. Verify the user exists by checking the `users` table.
 
 ## Troubleshooting
 - If login fails, verify the email and password hash in the database.
-- Ensure the database connection is working (check `php/db.php`).
+- Ensure the database connection is working (check `includes/db.php`).
 - Confirm that PHP sessions are enabled on the server.
 - Check server error logs for any PHP or database errors.
 

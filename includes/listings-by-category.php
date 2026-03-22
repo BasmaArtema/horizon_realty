@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include __DIR__ . '/db.php';
 
 $sql = "SELECT * FROM listings WHERE category = ?";
 $stmt = $conn->prepare($sql);
@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
 ?>
 
 <article class="product-card">
-    <img src="media/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
+    <img src="assets/media/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
 
     <h3><?php echo htmlspecialchars($row['title']); ?></h3>
 

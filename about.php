@@ -17,9 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Horizon Realty - Your local real estate agency for homes, condos, and land.">
     <meta name="keywords" content="about Horizon Realty, real estate agency">
-    <link rel="icon" href="media/favicon.ico">
+    <link rel="icon" href="assets/media/favicon.ico">
     <title>About Us - Horizon Realty</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -38,7 +38,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="media/logo.png" alt="Horizon Realty Logo">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -83,7 +83,7 @@
 
     <div class="about-hero">
         <video autoplay muted loop playsinline>
-            <source src="media/video1.mp4" type="video/mp4">
+            <source src="assets/media/video1.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay">
             <h2>Horizon Realty — Find Your Place</h2>
@@ -123,7 +123,7 @@
             </p>
             <p>
                 Listings can be updated easily through the 
-                <code>listings.json</code> file without modifying HTML pages.
+                <code>data/listings.json</code> file without modifying HTML pages.
             </p>
         </div>
 
@@ -139,6 +139,6 @@
     </footer>
 
 </body>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

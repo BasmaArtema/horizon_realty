@@ -67,50 +67,112 @@ $stmt->close();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="spring-theme">
-
-<div style="max-width: 600px; margin: 5rem auto; padding: 2rem; background: rgba(255,255,255,0.95); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-
-<h1>Edit Listing</h1>
-
-<?php if ($message != "") echo "<p style='color: " . (strpos($message, 'successfully') !== false ? 'green' : 'red') . ";'>$message</p>"; ?>
-
-<form method="POST" style="text-align: left;">
-
-    <label>Title</label><br>
-    <input type="text" name="title" value="<?php echo htmlspecialchars($row["title"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Category</label><br>
-    <input type="text" name="category" value="<?php echo htmlspecialchars($row["category"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Price</label><br>
-    <input type="number" name="price" value="<?php echo htmlspecialchars($row["price"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Address</label><br>
-    <input type="text" name="address" value="<?php echo htmlspecialchars($row["address"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Image</label><br>
-    <input type="text" name="image" value="<?php echo htmlspecialchars($row["image"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Beds</label><br>
-    <input type="number" name="beds" value="<?php echo htmlspecialchars($row["beds"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Baths</label><br>
-    <input type="number" name="baths" value="<?php echo htmlspecialchars($row["baths"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <label>Square Feet</label><br>
-    <input type="number" name="sqft" value="<?php echo htmlspecialchars($row["sqft"]); ?>" required style="width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"><br><br>
-
-    <button type="submit" style="width: 100%; padding: 0.8rem; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Save Changes</button>
-</form>
-
-<p style="text-align: center; margin-top: 1rem;">
-    <a href="admin-listings.php" style="color: var(--primary-color); text-decoration: none;">Back to Admin Listings</a> |
-    <a href="profile.php" style="color: var(--primary-color); text-decoration: none;">Profile</a> |
-    <a href="index.php" style="color: var(--primary-color); text-decoration: none;">Home</a> |
-    <a href="logout.php" style="color: var(--primary-color); text-decoration: none;">Logout</a>
-</p>
-
+<div class="top-auth-bar">
+    <div class="top-auth-inner">
+        <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+        <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+    </div>
 </div>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.php">
+                <img src="assets/media/logo.png" alt="Horizon Realty Logo">
+            </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="profile.php">PROFILE</a></li>
+                <li><a href="admin-users.php">ADMIN USERS</a></li>
+                <li><a href="admin-listings.php">ADMIN LISTINGS</a></li>
+                <li><a href="monitor.php">MONITOR</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="admin-page">
+    <section class="admin-hero">
+        <div>
+            <span class="admin-eyebrow">Administration</span>
+            <h1>Edit Listing</h1>
+            <p>Update property details, pricing, and media information while keeping the catalog accurate.</p>
+        </div>
+        <div class="admin-hero-actions">
+            <a href="admin-listings.php" class="profile-button primary"><i class="fas fa-arrow-left"></i> Back to Listings</a>
+        </div>
+    </section>
+
+    <section class="admin-panel admin-form-panel">
+        <?php if ($message != "") { ?>
+            <p class="admin-message <?php echo strpos($message, 'successfully') !== false ? 'success-message' : 'error-message'; ?>">
+                <?php echo htmlspecialchars($message); ?>
+            </p>
+        <?php } ?>
+
+        <form method="POST" class="admin-form-grid">
+            <div class="admin-form-field">
+                <label for="title">Title</label>
+                <input id="title" type="text" name="title" value="<?php echo htmlspecialchars($row["title"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field">
+                <label for="category">Category</label>
+                <input id="category" type="text" name="category" value="<?php echo htmlspecialchars($row["category"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field">
+                <label for="price">Price</label>
+                <input id="price" type="number" name="price" value="<?php echo htmlspecialchars($row["price"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field">
+                <label for="address">Address</label>
+                <input id="address" type="text" name="address" value="<?php echo htmlspecialchars($row["address"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field admin-form-field-full">
+                <label for="image">Image Path</label>
+                <input id="image" type="text" name="image" value="<?php echo htmlspecialchars($row["image"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field">
+                <label for="beds">Beds</label>
+                <input id="beds" type="number" name="beds" value="<?php echo htmlspecialchars($row["beds"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field">
+                <label for="baths">Baths</label>
+                <input id="baths" type="number" name="baths" value="<?php echo htmlspecialchars($row["baths"]); ?>" required>
+            </div>
+
+            <div class="admin-form-field admin-form-field-full">
+                <label for="sqft">Square Feet</label>
+                <input id="sqft" type="number" name="sqft" value="<?php echo htmlspecialchars($row["sqft"]); ?>" required>
+            </div>
+
+            <div class="admin-form-actions">
+                <button type="submit" class="profile-button primary"><i class="fas fa-floppy-disk"></i> Save Changes</button>
+                <a href="profile.php" class="admin-inline-link">Back to Profile</a>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2026 Horizon Realty. All rights reserved.</p>
+        <p>Find your dream home with us.</p>
+    </div>
+</footer>
 
 <script src="assets/js/scripts.js"></script>
 </body>

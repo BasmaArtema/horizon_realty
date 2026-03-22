@@ -69,47 +69,13 @@ foreach ($pages as $file => $label) {
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .status-online {
-            color: green;
-            font-weight: bold;
-        }
-
-        .status-offline {
-            color: red;
-            font-weight: bold;
-        }
-
-        .monitor-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .monitor-table th,
-        .monitor-table td {
-            border: 1px solid #ccc;
-            padding: 12px;
-            text-align: left;
-        }
-
-        .monitor-table th {
-            background-color: #f4f4f4;
-        }
-
-        .monitor-wrapper {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-    </style>
 </head>
 
 <body class="spring-theme">
     <div class="top-auth-bar">
         <div class="top-auth-inner">
             <?php if (isset($_SESSION["user_id"])) { ?>
-                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
                 <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
             <?php } else { ?>
                 <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
@@ -160,26 +126,54 @@ foreach ($pages as $file => $label) {
         </div>
     </header>
 
-    <main class="monitor-wrapper">
-        <h2>Website Monitoring Page</h2>
-        <p>This page reports the current working status of major Horizon Realty website features and services.</p>
+    <main class="admin-page">
+        <section class="admin-hero">
+            <div>
+                <span class="admin-eyebrow">System Overview</span>
+                <h1>Website Monitoring</h1>
+                <p>This dashboard reports the current status of the major Horizon Realty services and critical site pages.</p>
+            </div>
+            <div class="admin-hero-actions">
+                <a href="profile.php" class="profile-button primary"><i class="fas fa-arrow-left"></i> Back to Profile</a>
+            </div>
+        </section>
 
-        <table class="monitor-table">
-            <tr>
-                <th>Service</th>
-                <th>Status</th>
-            </tr>
+        <section class="admin-panel">
+            <div class="admin-section-heading">
+                <div>
+                    <h2>Service Status</h2>
+                    <p><?php echo count($services); ?> checks completed.</p>
+                </div>
+            </div>
 
-            <?php foreach ($services as $service) { ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($service["name"]); ?></td>
-                    <td class="<?php echo stripos($service["status"], 'Online') === 0 ? 'status-online' : 'status-offline'; ?>">
-                        <?php echo htmlspecialchars($service["status"]); ?>
-                    </td>
-                </tr>
-            <?php } ?>
-        </table>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <tr>
+                        <th>Service</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <?php foreach ($services as $service) { ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($service["name"]); ?></td>
+                            <td>
+                                <span class="admin-status-badge <?php echo stripos($service["status"], 'Online') === 0 ? 'status-online' : 'status-offline'; ?>">
+                                    <?php echo htmlspecialchars($service["status"]); ?>
+                                </span>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Horizon Realty. All rights reserved.</p>
+            <p>Find your dream home with us.</p>
+        </div>
+    </footer>
 
     <script src="assets/js/scripts.js"></script>
 </body>

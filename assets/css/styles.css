@@ -803,6 +803,27 @@ nav{
   color: var(--secondary-color);
 }
 
+.listing-option-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:0.6rem;
+  margin-top:1rem;
+}
+
+.listing-option-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.45rem 0.8rem;
+  border-radius:999px;
+  background:var(--accent-color);
+  color:var(--primary-color);
+  font-size:0.82rem;
+  font-weight:700;
+  line-height:1.2;
+}
+
 .view-details{
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: var(--light-text);

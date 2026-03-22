@@ -6,6 +6,11 @@ Horizon Realty is a PHP and MySQL real estate website built for a course project
 
 - Production URL: `https://abouart.myweb.cs.uwindsor.ca/index.php`
 
+## Repository
+
+- GitHub repository: `https://github.com/BasmaArtema/horizon_realty`
+- The repository is used to store the project source code, branches, and pull request workflow for development and submission tracking.
+
 ## Main Features
 
 - Public listing pages for multiple property categories
@@ -14,6 +19,7 @@ Horizon Realty is a PHP and MySQL real estate website built for a course project
 - Shared responsive layout with seasonal themes
 - Images and video content stored in `assets/media`
 - End-user and admin help/wiki pages
+- 20 property listings, each with two explicit options shown on listing cards
 
 ## Front-End Documentation
 
@@ -97,6 +103,7 @@ mysql -u YOUR_USERNAME -p YOUR_DATABASE_NAME < database/db_int.sql
 This import creates:
 
 - a `listings` table with 20 sample records
+- two option fields (`option_one` and `option_two`) for every listing
 - a `users` table with a default admin account
 
 ### Step 4. Configure PHP Database Access
@@ -174,6 +181,7 @@ Change this password after deployment if the site will remain online.
 For non-programmers maintaining the site:
 
 - Property records are stored in the MySQL `listings` table.
+- Each listing includes `option_one` and `option_two` values that describe two visible product options on the catalog cards.
 - Shared styles are in `assets/css/styles.css`.
 - Shared site behavior is in `assets/js/scripts.js`.
 - Market stats logic is in `assets/js/market-stats-script.js`.
@@ -247,4 +255,3 @@ git push origin feature-name
 ```
 
 Then open a pull request and merge after review.
-

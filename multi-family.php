@@ -1,4 +1,5 @@
 <?php
+session_start();
 $category = "multi-family";
 ?>
 
@@ -28,8 +29,13 @@ $category = "multi-family";
 <body class="spring-theme">
 <div class="top-auth-bar">
         <div class="top-auth-inner">
-            <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
-            <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+                <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            <?php } else { ?>
+                <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
+                <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
+            <?php } ?>
         </div>
     </div>
     <header>
@@ -68,7 +74,7 @@ $category = "multi-family";
                     <li><a href="buying-guide.php">BUYING GUIDE</a></li>
                     <li><a href="contact.php">CONTACT</a></li>
                     <li><a href="about.php">ABOUT US</a></li>
-                    <li><a href="help.html">HELP</a></li>
+                    <li><a href="help.php">HELP</a></li>
                 </ul>
             </nav>
         </div>

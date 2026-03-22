@@ -1,69 +1,185 @@
 # Horizon Realty
 
-A real estate website project built with HTML, CSS, and JavaScript.
+Horizon Realty is a PHP and MySQL real estate website built for a course project. The site includes public property browsing, user registration and login, private user profiles, admin management pages, multimedia content, and support documentation.
 
-## Getting Started
+## Live Site
 
-### Prerequisites
-- Git installed on your system
-- A web browser
-- (Optional) A local server like Apache or Node.js for full functionality
+- Production URL: `https://abouart.myweb.cs.uwindsor.ca/index.php`
 
-### Cloning the Repository
-To get a copy of this project on your local machine, run the following command:
+## Main Features
+
+- Public listing pages for multiple property categories
+- User registration, login, logout, and profile pages
+- Admin tools for user management, listing management, and service monitoring
+- Shared responsive layout with seasonal themes
+- Images and video content stored in `assets/media`
+- End-user and admin help/wiki pages
+
+## Project Structure
+
+- `index.php`: Homepage
+- `assets/css/`: Shared stylesheet files
+- `assets/js/`: Shared JavaScript files
+- `assets/media/`: Images, videos, logo, and favicon
+- `includes/`: Reusable PHP includes such as the database connection
+- `database/`: MySQL setup script
+- `docs/`: Project documentation
+- Root `.php` and `.html` files: Site pages, admin pages, and help pages
+
+## Installation Guide
+
+### Requirements
+
+- PHP-enabled hosting or a local PHP server
+- MySQL or MariaDB
+- A web server such as Apache
+- A browser for testing
+- Git if you want to clone from the repository
+
+### Step 1. Download The Project
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/BasmaArtema/horizon_realty.git
 ```
 
+Or copy the project folder into your web server directory manually.
 
-### Pulling Changes
-To update your local repository with the latest changes from the remote repository:
+### Step 2. Create A Database
+
+Create a MySQL database and a database user that has permission to read and write to that database.
+
+### Step 3. Import The Schema And Demo Data
+
+Use [`database/db_int.sql`](/c:/Users/smile/OneDrive/Documents/COMP3300_prject/horizon_realty/database/db_int.sql) to create the required tables and load the starter data.
+
+phpMyAdmin method:
+
+1. Open phpMyAdmin.
+2. Select your database.
+3. Click `Import`.
+4. Choose `database/db_int.sql`.
+5. Run the import.
+
+Command-line method:
 
 ```bash
-git pull origin main
+mysql -u YOUR_USERNAME -p YOUR_DATABASE_NAME < database/db_int.sql
 ```
 
-(Assuming the main branch is named `main`. Adjust if it's `master` or another branch.)
+This import creates:
 
-### Pushing Changes
-To contribute changes back to the repository:
+- a `listings` table with 20 sample records
+- a `users` table with a default admin account
 
-1. Stage your changes:
-   ```bash
-   git add .
-   ```
+### Step 4. Configure PHP Database Access
 
-2. Commit your changes:
-   ```bash
-   git commit -m "Your commit message"
-   ```
+Open [`includes/db.php`](/c:/Users/smile/OneDrive/Documents/COMP3300_prject/horizon_realty/includes/db.php) and update these values:
 
-3. Push to the remote repository:
-   ```bash
-   git push origin main
-   ```
+- `$host`
+- `$username`
+- `$password`
+- `$database`
 
-## Usage
-Open `index.php` in your web browser to view the website.
+These must match the MySQL credentials for the environment where you are deploying the project.
 
-## Project Structure
-- `index.php`: Main homepage
-- `assets/css/`: Shared stylesheets
-- `assets/js/`: JavaScript files
-- `assets/media/`: Images, video, and icons
-- `data/`: Data files such as `listings.json`
-- `includes/`: Shared PHP includes
-- `database/`: Database setup scripts
-- `docs/`: Project documentation
-- Various PHP and HTML files for site pages
+### Step 5. Upload The Files
 
-## Contributing
-1. Fork the repository
-2. Create a new branch for your feature: `git checkout -b feature-name`
-3. Make your changes and commit them
-4. Push to your fork: `git push origin feature-name`
-5. Create a pull request
+Upload the complete project to your PHP-enabled host. Keep these folders and files together:
+
+- `assets/`
+- `includes/`
+- `database/`
+- `docs/`
+- all root `.php` and `.html` pages
+
+If your host uses a folder such as `public_html`, place the site there or in the assigned course web directory.
+
+### Step 6. Serve The Site Through PHP
+
+Because the project uses PHP sessions and MySQL, do not open the pages as plain local files. Access the site through a web server using a URL such as:
+
+```text
+http://localhost/horizon_realty/index.php
+```
+
+or your hosted URL.
+
+### Step 7. Verify Core Functionality
+
+After deployment, test these pages first:
+
+- `index.php`
+- `register.php`
+- `login.php`
+- `profile.php`
+- `admin-users.php`
+- `admin-listings.php`
+- `monitor.php`
+
+Also confirm that CSS, JavaScript, images, and videos load correctly from the `assets/` folder.
+
+## Deployment Guide For myweb.cs.uwindsor.ca
+
+To deploy on `myweb.cs.uwindsor.ca`:
+
+1. Upload all project files to your assigned web space.
+2. Create or confirm your MySQL database details.
+3. Import `database/db_int.sql`.
+4. Update [`includes/db.php`](/c:/Users/smile/OneDrive/Documents/COMP3300_prject/horizon_realty/includes/db.php) with the correct host, database name, username, and password.
+5. Open the live site and test both public and admin pages.
+
+Current live deployment:
+
+- `https://abouart.myweb.cs.uwindsor.ca/index.php`
+
+## Default Admin Account
+
+The import script creates a demo admin account:
+
+- Email: `admin@horizonrealty.com`
+- Password: `admin123`
+
+Change this password after deployment if the site will remain online.
+
+## Updating Site Content
+
+For non-programmers maintaining the site:
+
+- Property records are stored in the MySQL `listings` table.
+- Shared styles are in `assets/css/styles.css`.
+- Shared site behavior is in `assets/js/scripts.js`.
+- Market stats logic is in `assets/js/market-stats-script.js`.
+- Images and videos live in `assets/media/`.
+
+To add or replace media:
+
+1. Upload the file to `assets/media/`.
+2. Update the page markup or database record that points to that file.
+3. Keep file names short and consistent.
+
+## Troubleshooting
+
+- If the site loads without styling, verify `assets/css/styles.css` uploaded correctly.
+- If login fails, verify the database import and `includes/db.php` credentials.
+- If admin pages show access denied, make sure you are logged in as an admin user.
+- If images or videos are missing, verify the filenames and folder paths in `assets/media/`.
+- If database-driven pages fail, verify that MySQL is running and PHP can connect to it.
+
+## Version Control
+
+Suggested contribution flow:
+
+```bash
+git checkout -b feature-name
+git add .
+git commit -m "Describe your change"
+git push origin feature-name
+```
+
+Then open a pull request and merge after review.
 
 ## License
-This project is licensed under the MIT License.
+
+This project is intended for academic use as part of the COMP3300 course project.

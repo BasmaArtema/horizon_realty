@@ -1,3 +1,6 @@
+-- Horizon Realty database bootstrap file.
+-- Creates the core tables and demo data used by the site.
+
 Hostname:
 localhost
 Database:
@@ -8,6 +11,7 @@ Password:
 UDPKuK2uf3ZP97W2qXxS
 
 USE abouart_horizon_realty;
+-- Main property catalog used by the listing pages and admin listing management.
 CREATE TABLE listings (
     id VARCHAR(10) PRIMARY KEY,
     title VARCHAR(255),
@@ -22,6 +26,7 @@ CREATE TABLE listings (
 
 USE abouart_horizon_realty;
 
+-- Seed the catalog with 20 sample properties for testing and demonstrations.
 INSERT INTO listings (id, title, category, price, address, image, beds, baths, sqft) VALUES
 ('L001','Maple Grove Family Home','single-family',789000,'124 Maple Grove Dr','RFH1.jpg',4,3,2400),
 ('L002','Vintage Colonial Estate','single-family',925000,'88 Heritage Lane','RFH2.jpg',5,4,3200),
@@ -44,6 +49,7 @@ INSERT INTO listings (id, title, category, price, address, image, beds, baths, s
 ('L019','Triplex City Investment','multi-family',920000,'89 King Ave','SR3.jpg',6,4,3500),
 ('L020','Mountain View Vacation Home','vacation',425000,'77 Alpine Road','vac1.jpg',3,2,1400);
 
+-- User accounts table for registration, login, profile access, and admin permissions.
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(100) NOT NULL,
@@ -54,6 +60,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Default admin account for first-time setup and project demonstration.
 INSERT INTO users (full_name, email, password, role, status)
 VALUES (
     'Admin User',

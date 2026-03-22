@@ -108,6 +108,47 @@ body.classic-theme {
   white-space: nowrap;
 }
 
+.theme-switcher{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-switcher-label{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--light-text);
+  white-space: nowrap;
+}
+
+.theme-switcher-select{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--light-text);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-switcher-select option{
+  color: var(--text-color);
+  background: #ffffff;
+}
+
+.theme-switcher-select:focus{
+  outline: 2px solid rgba(255, 255, 255, 0.45);
+  outline-offset: 2px;
+}
+
 header{
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -920,6 +961,10 @@ footer{
     justify-content: center;
     padding: 0 1rem;
   }
+  .theme-switcher{
+    width: 100%;
+    justify-content: center;
+  }
   .header-container{flex-direction:column;gap:1rem;}
   nav{flex: 1 1 auto; width: 100%;}
   .mobile-menu-toggle{display:block;}
@@ -1020,6 +1065,75 @@ footer{
 
 #weatherContent p{
   margin: 0.5rem 0;
+}
+
+.market-chart-card{
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.market-chart-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.market-chart-heading h3{
+  color: var(--primary-color);
+  margin-bottom: 0.35rem;
+}
+
+.market-chart-heading p{
+  color: var(--muted-text);
+}
+
+.market-chart-stage{
+  overflow-x: auto;
+}
+
+.currency-chart{
+  width: 100%;
+  min-width: 680px;
+  height: auto;
+  display: block;
+}
+
+.chart-axis-line{
+  stroke: rgba(45, 55, 72, 0.4);
+  stroke-width: 2;
+}
+
+.chart-grid-line{
+  stroke: rgba(45, 55, 72, 0.12);
+  stroke-width: 1;
+  stroke-dasharray: 6 6;
+}
+
+.chart-axis-label{
+  fill: var(--muted-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chart-value-label{
+  fill: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.chart-bar{
+  fill: var(--secondary-color);
+  opacity: 0.78;
+}
+
+.chart-bar-base{
+  fill: var(--primary-color);
+  opacity: 0.92;
 }
 
 /* ================= FEATURED PAGE BOTTOM BOX ================= */

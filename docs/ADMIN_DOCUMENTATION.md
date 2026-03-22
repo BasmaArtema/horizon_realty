@@ -51,6 +51,23 @@ To set up the admin user:
 2. This will create the necessary tables and insert the default admin user.
 3. Verify the user exists by checking the `users` table.
 
+## Deployment Checklist
+Before demonstrating admin features on a new server:
+1. Upload the full project, including the `assets`, `includes`, `database`, and `docs` folders.
+2. Import `database/db_int.sql` into the target MySQL database.
+3. Update `includes/db.php` with the correct host, username, password, and database name.
+4. Confirm `login.php`, `profile.php`, `admin-users.php`, `admin-listings.php`, `edit-listing.php`, and `monitor.php` load correctly.
+5. Log in as admin and test user toggling, listing editing, and the monitoring page.
+
+## Live Deployment
+- Live URL: `https://abouart.myweb.cs.uwindsor.ca/index.php`
+- Recommended smoke test after deployment:
+  - Log in as admin
+  - Open `profile.php`
+  - Open `admin-users.php`
+  - Open `admin-listings.php`
+  - Open `monitor.php`
+
 ## Troubleshooting
 - If login fails, verify the email and password hash in the database.
 - Ensure the database connection is working (check `includes/db.php`).

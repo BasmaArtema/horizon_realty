@@ -103,16 +103,12 @@ $stmt->close();
     <button type="submit" style="width: 100%; padding: 0.8rem; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Save Changes</button>
 </form>
 
-<<<<<<< HEAD
-<p style="text-align: center; margin-top: 1rem;"><a href="admin-listings.php" style="color: var(--primary-color); text-decoration: none;">Back to Admin Listings</a></p>
-=======
-<p>
-<a href="admin-listings.php">Back to Admin Listings</a> |
-<a href="profile.php">Profile</a> |
-<a href="index.php">Home</a> |
-<a href="logout.php">Logout</a>
+<p style="text-align: center; margin-top: 1rem;">
+    <a href="admin-listings.php" style="color: var(--primary-color); text-decoration: none;">Back to Admin Listings</a> |
+    <a href="profile.php" style="color: var(--primary-color); text-decoration: none;">Profile</a> |
+    <a href="index.php" style="color: var(--primary-color); text-decoration: none;">Home</a> |
+    <a href="logout.php" style="color: var(--primary-color); text-decoration: none;">Logout</a>
 </p>
->>>>>>> haleema2001/main
 
 </div>
 

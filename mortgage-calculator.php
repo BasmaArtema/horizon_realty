@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
@@ -72,8 +74,18 @@
         }
     </style>
 </head>
-
 <body class="spring-theme">
+<div class="top-auth-bar">
+        <div class="top-auth-inner">
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+                <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            <?php } else { ?>
+                <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
+                <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
+            <?php } ?>
+        </div>
+    </div>
     <header>
         
         <div class="header-container">
@@ -105,15 +117,15 @@
                         <li><a href="waterfront.php">WATERFRONT</a></li>
                     </ul>
                 </li>
-                <li><a href="featured.html">FEATURED</a></li>
-                <li><a href="market-stats.html">MARKET STATS</a></li>
-                <li><a href="mortgage-calculator.html" class="active">MORTGAGE CALCULATOR</a></li>
-                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
-                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="featured.php">FEATURED</a></li>
+                <li><a href="market-stats.php">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.php" class="active">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.php">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.php">BUYING GUIDE</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="about.php">ABOUT US</a></li>
                 <li><a href="help.html#calculator">HELP</a></li>
-                <li><a href="login.php">ADMIN LOGIN</a></li>
+                
             </ul>
         </nav>
         </div>
@@ -155,7 +167,7 @@
                     </div>
                     <p class="disclaimer">
                         <i class="fas fa-exclamation-circle"></i> This calculator provides estimates only. Actual terms
-                        depend on your credit and lender. For personalized advice, <a href="contact.html">contact
+                        depend on your credit and lender. For personalized advice, <a href="contact.php">contact
                             us</a>.
                     </p>
                 </div>

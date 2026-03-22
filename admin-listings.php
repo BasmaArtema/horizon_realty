@@ -56,17 +56,15 @@ $result = $conn->query("SELECT id, title, category, price FROM listings ORDER BY
 
 <h1>Admin Listings Management</h1>
 
-<<<<<<< HEAD
-<p style="text-align: center;"><a href="profile.php" style="display: inline-block; padding: 0.5rem 1rem; background: var(--primary-color); color: #fff; text-decoration: none; border-radius: 5px;">Back to Profile</a></p>
-=======
-<p>
-    <a href="profile.php">Back to Profile</a> |
+<p style="text-align: center;">
+    <a href="profile.php" style="display: inline-block; padding: 0.5rem 1rem; background: var(--primary-color); color: #fff; text-decoration: none; border-radius: 5px;">Back to Profile</a>
+</p>
+<p style="text-align: center; margin-top: 0.75rem;">
     <a href="index.php">Home</a> |
     <a href="logout.php">Logout</a>
 </p>
 
 <hr>
->>>>>>> haleema2001/main
 
 <table class="admin-table">
     <tr>

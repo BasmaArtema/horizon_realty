@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
@@ -20,8 +22,18 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
 </head>
-
 <body class="spring-theme">
+<div class="top-auth-bar">
+        <div class="top-auth-inner">
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+                <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            <?php } else { ?>
+                <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
+                <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
+            <?php } ?>
+        </div>
+    </div>
     <header>
         <div class="header-container">
             <div class="logo">
@@ -51,20 +63,16 @@
                         <li><a href="waterfront.php">WATERFRONT</a></li>
                     </ul>
                 </li>
-                <li><a href="featured.html">FEATURED</a></li>
-                <li><a href="market-stats.html" class="active">MARKET STATS</a></li>
-                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
-                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
-                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="featured.php">FEATURED</a></li>
+                <li><a href="market-stats.php" class="active">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.php">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.php">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.php">BUYING GUIDE</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="about.php">ABOUT US</a></li>
                 <li><a href="help.html">HELP</a></li>
-<<<<<<< HEAD
-                <li><a href="login.php">ADMIN LOGIN</a></li>
-=======
-<li><a href="login.php">LOGIN</a></li>
-<li><a href="register.php">REGISTER</a></li>
->>>>>>> haleema2001/main
+                
+                
             </ul>
         </nav>
         </div>

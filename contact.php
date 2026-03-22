@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
@@ -22,6 +24,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="spring-theme">
+<div class="top-auth-bar">
+        <div class="top-auth-inner">
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+                <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            <?php } else { ?>
+                <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
+                <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
+            <?php } ?>
+        </div>
+    </div>
 
 <header>
  
@@ -34,10 +47,9 @@
             <span></span>
             <span></span>
         </button>
-<<<<<<< HEAD
         <nav>
             <ul class="nav-menu">
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <li class="dropdown">
                     <a href="#" aria-haspopup="true" aria-expanded="false">LISTINGS</a>
                     <ul class="dropdown-content" aria-label="Listing categories">
@@ -54,51 +66,19 @@
                         <li><a href="waterfront.php">WATERFRONT</a></li>
                     </ul>
                 </li>
-                <li><a href="featured.html">FEATURED</a></li>
-                <li><a href="market-stats.html">MARKET STATS</a></li>
-                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
-                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
-                <li><a href="buying-guide.html">BUYING GUIDE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="featured.php">FEATURED</a></li>
+                <li><a href="market-stats.php">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.php">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.php">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.php">BUYING GUIDE</a></li>
+                <li><a href="contact.php" class="active">CONTACT</a></li>
+                <li><a href="about.php">ABOUT US</a></li>
                 <li><a href="help.html">HELP</a></li>
-                <li><a href="login.php">ADMIN LOGIN</a></li>
+                
+                
             </ul>
         </nav>
     </div>
-=======
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="index.php">HOME</a></li>
-            <li class="dropdown">
-                <a href="#">LISTINGS</a>
-                <ul class="dropdown-content">
-                    <li><a href="single-family.php">SINGLE FAMILY</a></li>
-                    <li><a href="condos.php">CONDOS</a></li>
-                    <li><a href="townhomes.php">TOWNHOMES</a></li>
-                    <li><a href="luxury-estates.php">LUXURY ESTATES</a></li>
-                    <li><a href="commercial.php">COMMERCIAL</a></li>
-                    <li><a href="land.php">LAND</a></li>
-                    <li><a href="rentals.php">RENTALS</a></li>
-                    <li><a href="multi-family.php">MULTI-FAMILY</a></li>
-                    <li><a href="new-developments.php">NEW DEVELOPMENTS</a></li>
-                    <li><a href="vacation-properties.php">VACATION</a></li>
-                    <li><a href="waterfront.php">WATERFRONT</a></li>
-                </ul>
-            </li>
-            <li><a href="featured.html">FEATURED</a></li>
-            <li><a href="market-stats.html">MARKET STATS</a></li>
-            <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
-            <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
-            <li><a href="buying-guide.html">BUYING GUIDE</a></li>
-            <li><a href="contact.html" class="active">CONTACT</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="help.html">HELP</a></li>
-<li><a href="login.php">LOGIN</a></li>
-<li><a href="register.php">REGISTER</a></li>
-        </ul>
-    </nav>
->>>>>>> haleema2001/main
 </header>
 
 <section class="image-section">

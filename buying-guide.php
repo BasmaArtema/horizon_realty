@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!--
   Project: Horizon Realty
   Purpose: Real estate website
@@ -21,8 +23,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body class="spring-theme">
+<div class="top-auth-bar">
+        <div class="top-auth-inner">
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="profile.php" class="top-auth-link"><i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($_SESSION["user_name"]); ?></a>
+                <a href="logout.php" class="top-auth-link"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            <?php } else { ?>
+                <a href="login.php" class="top-auth-link"><i class="fas fa-right-to-bracket"></i> Login</a>
+                <a href="register.php" class="top-auth-link"><i class="fas fa-user-plus"></i> Register</a>
+            <?php } ?>
+        </div>
+    </div>
     <header>
         <div class="header-container">
             <div class="logo">
@@ -52,15 +64,15 @@
                         <li><a href="waterfront.php">WATERFRONT</a></li>
                     </ul>
                 </li>
-                <li><a href="featured.html">FEATURED</a></li>
-                <li><a href="market-stats.html">MARKET STATS</a></li>
-                <li><a href="mortgage-calculator.html">MORTGAGE CALCULATOR</a></li>
-                <li><a href="virtual-tour.html">VIRTUAL TOUR</a></li>
-                <li><a href="buying-guide.html" class="active">BUYING GUIDE</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="featured.php">FEATURED</a></li>
+                <li><a href="market-stats.php">MARKET STATS</a></li>
+                <li><a href="mortgage-calculator.php">MORTGAGE CALCULATOR</a></li>
+                <li><a href="virtual-tour.php">VIRTUAL TOUR</a></li>
+                <li><a href="buying-guide.php" class="active">BUYING GUIDE</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="about.php">ABOUT US</a></li>
                 <li><a href="help.html#listings">HELP</a></li>
-                <li><a href="login.php">ADMIN LOGIN</a></li>
+                
             </ul>
         </nav>
         </div>
@@ -92,11 +104,11 @@
                     <div class="budget-guide">
                         <div class="budget">
                             <h4><i class="fas fa-money-bill-wave"></i> Mortgage Calculator</h4>
-                            <p>Use our <a href="mortgage-calculator.html">Mortgage Calculator</a> to estimate monthly payments for different loan amounts and terms.</p>
+                            <p>Use our <a href="mortgage-calculator.php">Mortgage Calculator</a> to estimate monthly payments for different loan amounts and terms.</p>
                         </div>
                         <div class="budget">
                             <h4><i class="fas fa-globe"></i> Exchange Rates</h4>
-                            <p>International buyers can check <a href="market-stats.html">Market Stats</a> for current CAD exchange rates.</p>
+                            <p>International buyers can check <a href="market-stats.php">Market Stats</a> for current CAD exchange rates.</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +120,7 @@
                 <div class="view-content">
                     <h3>3. Schedule a Viewing</h3>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> <strong>Contact us</strong> – Use the <a href="contact.html">Contact</a> form to request a viewing or ask questions.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Contact us</strong> – Use the <a href="contact.php">Contact</a> form to request a viewing or ask questions.</li>
                         <li><i class="fas fa-check-circle"></i> <strong>Theme</strong> – The site uses seasonal themes (Spring, Christmas, Classic) that change automatically.</li>
                     </ul>
                 </div>
@@ -126,15 +138,15 @@
                         </div>
                         <div class="schedule-row">
                             <div class="schedule-cell">Mortgage Calculator</div>
-                            <div class="schedule-cell"><a href="mortgage-calculator.html">mortgage-calculator.html</a></div>
+                            <div class="schedule-cell"><a href="mortgage-calculator.php">mortgage-calculator.php</a></div>
                         </div>
                         <div class="schedule-row">
                             <div class="schedule-cell">Market Stats (Rates)</div>
-                            <div class="schedule-cell"><a href="market-stats.html">market-stats.html</a></div>
+                            <div class="schedule-cell"><a href="market-stats.php">market-stats.php</a></div>
                         </div>
                         <div class="schedule-row">
                             <div class="schedule-cell">Contact / Inquiries</div>
-                            <div class="schedule-cell"><a href="contact.html">contact.html</a></div>
+                            <div class="schedule-cell"><a href="contact.php">contact.php</a></div>
                         </div>
                         <div class="schedule-row">
                             <div class="schedule-cell">Help & FAQ</div>
@@ -146,7 +158,7 @@
         </div>
 
         <div class="view-cta">
-            <p><i class="fas fa-phone-alt"></i> Ready to take the next step? <a href="contact.html">Contact us</a> to schedule a viewing or get pre-approval advice.</p>
+            <p><i class="fas fa-phone-alt"></i> Ready to take the next step? <a href="contact.php">Contact us</a> to schedule a viewing or get pre-approval advice.</p>
         </div>
     </main>
 

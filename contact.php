@@ -73,7 +73,7 @@
                 <li><a href="buying-guide.php">BUYING GUIDE</a></li>
                 <li><a href="contact.php" class="active">CONTACT</a></li>
                 <li><a href="about.php">ABOUT US</a></li>
-                <li><a href="help.html">HELP</a></li>
+                <li><a href="help.php">HELP</a></li>
                 
                 
             </ul>
@@ -121,6 +121,29 @@
         </div>
 
     </div>
+
+    <section class="contact-map-section">
+        <div class="contact-box contact-map-card">
+            <div class="contact-map-header">
+                <div>
+                    <h3>Find Us On The Map</h3>
+                    <p>Explore our Windsor office location and nearby downtown area with an interactive map.</p>
+                </div>
+                <a href="https://www.openstreetmap.org/?mlat=42.3149&mlon=-83.0364#map=15/42.3149/-83.0364" class="contact-map-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-location-arrow"></i>
+                    Open Full Map
+                </a>
+            </div>
+            <div class="contact-map-frame">
+                <iframe
+                    title="Horizon Realty office map"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-83.0564%2C42.3049%2C-83.0164%2C42.3249&amp;layer=mapnik&amp;marker=42.3149%2C-83.0364"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
 
 </main>
 

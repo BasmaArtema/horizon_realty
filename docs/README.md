@@ -15,6 +15,32 @@ Horizon Realty is a PHP and MySQL real estate website built for a course project
 - Images and video content stored in `assets/media`
 - End-user and admin help/wiki pages
 
+## Front-End Documentation
+
+The Horizon Realty front end is built with shared, reusable assets so the site stays consistent and is easier to maintain.
+
+- HTML/PHP pages provide the page structure and session-aware navigation.
+- `assets/css/styles.css` contains the shared site theme, layout, responsive rules, admin styling, and page-specific UI styling.
+- `assets/js/scripts.js` controls seasonal themes, logged-in theme switching, mobile navigation, and featured listing filters.
+- `assets/js/market-stats-script.js` powers the market stats tools, currency converter, and chart visualization.
+- `assets/media/` stores the visual assets used by the front end, including listing images, branding, and videos.
+
+The front end includes:
+
+- responsive navigation and dropdown menus
+- public and logged-in header states
+- listing category pages rendered through shared PHP includes
+- multimedia sections with images and videos
+- interactive UI features such as the mortgage calculator, market stats tools, chart, and map
+
+For user-facing front-end help pages, see:
+
+- `help.php`
+- `wiki-welcome.html`
+- `wiki-listings.html`
+- `wiki-calculator.html`
+- `wiki-api.html`
+
 ## Project Structure
 
 - `index.php`: Homepage
@@ -159,6 +185,48 @@ To add or replace media:
 2. Update the page markup or database record that points to that file.
 3. Keep file names short and consistent.
 
+## How To Use The Site
+
+This section provides a simple step-by-step guide for end users.
+
+### Public Users
+
+1. Open `index.php` or the live homepage.
+2. Use the main navigation to browse listing categories such as Single Family, Condos, Townhomes, and Waterfront.
+3. Open `featured.php` to view highlighted listings.
+4. Open `market-stats.php` to use the exchange-rate tools and comparison chart.
+5. Open `mortgage-calculator.php` to estimate monthly payments.
+6. Open `virtual-tour.php` or `about.php` to view multimedia content.
+7. Open `contact.php` to send an inquiry or find the office on the interactive map.
+
+### Registered Users
+
+1. Open `register.php` to create an account.
+2. Open `login.php` to sign in.
+3. After login, use `profile.php` to view account information and quick links.
+4. Use the theme switcher in the top bar to choose Auto, Spring, Christmas, or Classic themes.
+
+### Admin Users
+
+1. Log in with an admin account.
+2. Open `profile.php`.
+3. Use the Admin Controls section to access:
+   - `admin-users.php` for enabling or disabling user accounts
+   - `admin-listings.php` for reviewing listings
+   - `edit-listing.php` for editing listing records
+   - `monitor.php` for checking website service status
+
+### Help And Training Pages
+
+Users can access guided help from:
+
+- `help.php` for the Help Center overview
+- `wiki-welcome.html` for site introduction
+- `wiki-listings.html` for browsing instructions
+- `wiki-calculator.html` for mortgage tool guidance
+- `wiki-api.html` for live data/API explanation
+- `wiki-admin.html` for admin usage guidance
+
 ## Troubleshooting
 
 - If the site loads without styling, verify `assets/css/styles.css` uploaded correctly.
@@ -180,6 +248,3 @@ git push origin feature-name
 
 Then open a pull request and merge after review.
 
-## License
-
-This project is intended for academic use as part of the COMP3300 course project.

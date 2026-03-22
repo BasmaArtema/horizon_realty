@@ -42,10 +42,10 @@ The front end includes:
 For user-facing front-end help pages, see:
 
 - `help.php`
-- `wiki-welcome.html`
-- `wiki-listings.html`
-- `wiki-calculator.html`
-- `wiki-api.html`
+- `wiki-welcome.php`
+- `wiki-listings.php`
+- `wiki-calculator.php`
+- `wiki-api.php`
 
 ## Project Structure
 
@@ -229,11 +229,11 @@ This section provides a simple step-by-step guide for end users.
 Users can access guided help from:
 
 - `help.php` for the Help Center overview
-- `wiki-welcome.html` for site introduction
-- `wiki-listings.html` for browsing instructions
-- `wiki-calculator.html` for mortgage tool guidance
-- `wiki-api.html` for live data/API explanation
-- `wiki-admin.html` for admin usage guidance
+- `wiki-welcome.php` for site introduction
+- `wiki-listings.php` for browsing instructions
+- `wiki-calculator.php` for mortgage tool guidance
+- `wiki-api.php` for live data/API explanation
+- `wiki-admin.php` for admin usage guidance
 
 ## Troubleshooting
 
